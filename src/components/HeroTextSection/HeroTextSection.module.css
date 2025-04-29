@@ -1,0 +1,96 @@
+.heroSection {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: left; /* ← CENTRADO TOTAL! */
+    padding: 4rem 2rem;
+    font-family: "Advent Pro", sans-serif;
+    overflow: hidden;
+  }
+  
+  
+  /* Fondo separado */
+  .background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* background: linear-gradient(to bottom right, #0f172a, #14532d, #1e3a8a); */
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+  }
+  
+  /* Capa de texto */
+  .heroTextContainer {
+    position: relative;
+    max-width: 700px;
+    text-align: left;
+    z-index: 10;
+  }
+  
+  .heroTitle {
+    font-family: 'Advent Pro', sans-serif; 
+    font-size: 7rem;
+    font-weight: bold;
+    display: inline-block;
+    background: linear-gradient(to right, #5ef1c3, #3b82f6); /* Verde más oscuro ahora */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: lighten;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  
+  @media (min-width: 640px) {
+    .heroTitle {
+      font-size: 4rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .heroTitle {
+      font-size: 7rem;
+    }
+  }
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+  }
+  
+  .heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .heroButton {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .termsButton {
+    background-color: #374151;
+    color: #ffffff;
+  }
+  
+  .termsButton:hover {
+    background-color: #4b5563;
+  }
+  
+  .applyButton {
+    background: linear-gradient(to right, #34d399, #3b82f6);
+    color: #ffffff;
+  }
+  
+  .applyButton:hover {
+    background: linear-gradient(to right, #22c55e, #2563eb);
+  }
+  

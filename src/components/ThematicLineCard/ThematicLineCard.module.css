@@ -1,0 +1,51 @@
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* semitransparente */
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    height: auto;
+  }
+  
+  .icon {
+    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Colores específicos */
+  .icon-green {
+    color: #34d399; /* Verde */
+  }
+  .icon-yellow {
+    color: #facc15; /* Amarillo */
+  }
+  .icon-red {
+    color: #ef4444; /* Rojo */
+  }
+  .icon-blue {
+    color: #3b82f6; /* Azul */
+  }
+  .icon-purple {
+    color: #a78bfa; /* Púrpura */
+  }
+  
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    line-height: 1.5;
+  }
+  

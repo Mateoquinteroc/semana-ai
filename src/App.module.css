@@ -1,0 +1,31 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: linear-gradient(to bottom right, #0f172a, #14532d, #1e3a8a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none; /* evita bloquear clicks */
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  width: 100%; /* ✅ usar 100% en lugar de 100vw */
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 5rem;
+}
+
+.container :global(button) {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}

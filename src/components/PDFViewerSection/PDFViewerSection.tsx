@@ -5,7 +5,6 @@ import pdfFile from "/Convocatoria ponencias y experiencias Semana I.A. 2025 (1)
 const PDFViewerSection: React.FC = () => {
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Consulta el Documento</h2>
       <div className={styles.viewerWrapper}>
         <iframe
           src={`${pdfFile}#view=FitH`}

@@ -33,7 +33,7 @@ function AppWrapper() {
           />
           <Route path="/documento" element={<PDFViewerSection />} />
         </Routes>
-        <Timeline/>
+        {location.pathname !== '/documento' && <Timeline/>}
       </div>
     </>
   );

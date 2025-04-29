@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 import Fondo from './components/Fondo/Fondo';
 import styles from './App.module.css';

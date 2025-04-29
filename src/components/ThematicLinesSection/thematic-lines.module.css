@@ -39,7 +39,15 @@
   margin-bottom: 2rem;
 }
 
-
+@media (min-width:300px) {
+  .section {
+    width: 30%;
+    margin: 0;
+  }
+  .grid {
+    left: 0;
+  }
+}
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -51,4 +59,3 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-

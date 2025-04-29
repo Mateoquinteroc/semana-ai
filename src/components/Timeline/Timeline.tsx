@@ -1,4 +1,3 @@
-// Timeline.tsx
 import React from "react";
 import styles from "./Timeline.module.css";
 import { CalendarDays } from "lucide-react";

@@ -43,9 +43,9 @@
     line-height: 1;
   }
   
-  @media (min-width: 640px) {
+  @media (min-width: 300px) {
     .heroTitle {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
   @media (min-width: 768px) {

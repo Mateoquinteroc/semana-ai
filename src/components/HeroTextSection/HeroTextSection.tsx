@@ -3,12 +3,21 @@ import styles from "./HeroTextSection.module.css";
 
 const HeroTextSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [keywordIndex, setKeywordIndex] = useState(0);
+  const keywords = ["artes", "ciencias"];
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setKeywordIndex((prev) => (prev + 1) % keywords.length);
+    }, 3000); // Cambia cada 3 segundos
+    return () => clearInterval(interval);
   }, []);
 
   const pdfURL =
@@ -21,7 +30,12 @@ const HeroTextSection: React.FC = () => {
         <h1 className={styles.heroTitle}>
           SEMANA DE LA <br /> INTELIGENCIA <br /> ARTIFICIAL
         </h1>
-        <p className={styles.heroSubtitle}>en las artes y la ciencia.</p>
+        <p className={styles.heroSubtitle}>
+          en las{" "}
+          <span className={styles.fadeText} key={keywordIndex}>
+            {keywords[keywordIndex]}
+          </span>
+        </p>
         <div className={styles.heroButtons}>
           <a
             href={isMobile ? pdfURL : "/documento"}

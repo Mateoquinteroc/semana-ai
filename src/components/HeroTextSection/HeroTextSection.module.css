@@ -42,6 +42,24 @@
     margin-bottom: 1rem;
     line-height: 1;
   }
+  .fadeText {
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: opacity 0.5s ease;
+    color: #d1d5db;
+    font-weight: 600;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
   
   @media (min-width: 300px) {
     .heroTitle {
@@ -55,7 +73,7 @@
   }
   
   .heroSubtitle {
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: #d1d5db;
     margin-bottom: 2rem;
   }

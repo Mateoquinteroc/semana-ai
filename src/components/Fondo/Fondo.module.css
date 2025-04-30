@@ -1,13 +1,27 @@
 .fondoContainer {
-  position: fixed; /* 🔥 cambio clave: que quede fijo */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+
   background-image: url('../../assets/fondo.png');
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  z-index: 0; /* aseguramos que esté debajo de todo */
-  pointer-events: none; /* no bloquea clics */
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* En móviles y tablets forzamos ajuste */
+@media (max-width: 768px) {
+  .fondoContainer {
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+  }
 }

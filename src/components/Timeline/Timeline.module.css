@@ -79,4 +79,20 @@
   background-color: #14b8a6;
 }
 
+@media (max-width: 768px) {
+    .timelineCard {
+      max-width: 350px;
+      width: 100%;
+      margin: 0 auto;              /* ← CENTRAR */
+      padding: 1rem;               /* ← Algo de aire para que no colapse */
+    }
+  
+    .timelineContainer {
+      padding: 1rem;
+    }
+
+    .timelineTitle{
+        margin-bottom: 1rem;
+    }
+  }
   

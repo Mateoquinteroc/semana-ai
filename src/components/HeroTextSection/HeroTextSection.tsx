@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./HeroTextSection.module.css";
 
 const HeroTextSection: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const pdfURL =
+    "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025%20(1).pdf#view=FitH";
+
   return (
     <section className={styles.heroSection} id="hero-section">
       <div className={styles.background} />
@@ -12,8 +24,8 @@ const HeroTextSection: React.FC = () => {
         <p className={styles.heroSubtitle}>en las artes y la ciencia.</p>
         <div className={styles.heroButtons}>
           <a
-            href="/documento"
-            target="_blank"
+            href={isMobile ? pdfURL : "/documento"}
+            target={isMobile ? "_self" : "_blank"}
             rel="noopener noreferrer"
             className={`${styles.heroButton} ${styles.termsButton}`}
           >

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./PDFViewerSection.module.css";
-import pdfFile from "/Convocatoria ponencias y experiencias Semana I.A. 2025 (1).pdf"; // Ajusta si está en otra ruta
+import pdfFile from "/Convocatoria ponencias y experiencias Semana I.A. 2025.pdf"; // Ajusta si está en otra ruta
 
 const PDFViewerSection: React.FC = () => {
   return (

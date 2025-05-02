@@ -9,7 +9,7 @@ interface Event {
 }
 
 const timelineEvents: Event[] = [
-  { title: "Apertura de convocatoria", date: "Miércoles, 30 de abril" },
+  { title: "Apertura de convocatoria", date: "Lunes, 5 de Mayo" },
   { title: "Fecha límite de envío de propuestas", date: "Hasta el 04 de julio" },
   { title: "Notificación de propuestas seleccionadas", date: "25 de julio" },
   { title: "Realización del encuentro", date: "11 al 15 de agosto" },

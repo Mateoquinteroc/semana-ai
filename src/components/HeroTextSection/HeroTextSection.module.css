@@ -39,7 +39,7 @@
     color: transparent;
     -webkit-text-fill-color: transparent;
     mix-blend-mode: lighten;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     line-height: 1;
   }
   .fadeText {
@@ -73,12 +73,15 @@
   }
   
   .heroSubtitle {
-    font-size: 2rem;
+    font-family: 'Advent Pro', sans-serif; 
+    font-size: 3rem;
     color: #d1d5db;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
   }
   
   .heroButtons {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;

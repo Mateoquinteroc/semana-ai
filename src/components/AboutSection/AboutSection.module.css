@@ -1,0 +1,51 @@
+.aboutSection {
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 3rem;
+  }
+  
+  .contentBox {
+    background-color: rgba(23, 23, 23, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    max-width: 900px;
+    color: #f3f4f6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+  }
+  
+  .paragraph {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #f9fafb;
+  }
+  
+  .paragraph:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .contentBox {
+      padding: 1.5rem;
+    }
+  
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
+  

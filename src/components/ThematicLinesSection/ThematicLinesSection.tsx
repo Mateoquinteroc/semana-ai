@@ -57,10 +57,7 @@ const ThematicLinesSection: React.FC = () => {
     <section id="tarjetas" className={styles.section}>
       <h2 className={styles.title}>Postula tu ponencia o experiencia</h2>
       <p className={styles.description}>
-        ¡Te invitamos a ser parte activa de la Semana de la Inteligencia
-        Artificial! Postula tu ponencia o experiencia y comparte tus
-        conocimientos e investigaciones en la intersección entre la IA, el arte
-        y la ciencia.
+      <strong>¿Estás explorando los límites entre la inteligencia artificial, el arte y la ciencia?</strong> Postula tu ponencia o experiencia para la Semana de la IA, del 11 al 15 de agosto en Manizales. Comparte tu visión en este cruce de mundos convocado por el Centro Cultural del Banco de la República y el Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas.
       </p>
 
       <h3 className={styles.subtitle}>Líneas Temáticas</h3>

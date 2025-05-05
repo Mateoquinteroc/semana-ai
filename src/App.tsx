@@ -8,6 +8,9 @@ import ThematicLinesSection from './components/ThematicLinesSection/ThematicLine
 import PDFViewerSection from './components/PDFViewerSection/PDFViewerSection';
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
 import Timeline from './components/Timeline/Timeline';
+import EventCategories from './components/EventCategories/EventCategories';
+import AboutSection from './components/AboutSection/AboutSection';
+import ProgramacionSection from './components/ProgramacionSection/ProgramacionSection';
 
 function AppWrapper() {
   const location = useLocation();
@@ -34,6 +37,9 @@ function AppWrapper() {
           <Route path="/documento" element={<PDFViewerSection />} />
         </Routes>
         {location.pathname !== '/documento' && <Timeline/>}
+        {/* <EventCategories/>
+        <AboutSection/>
+        <ProgramacionSection/> */}
       </div>
     </>
   );

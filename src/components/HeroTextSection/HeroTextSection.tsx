@@ -7,7 +7,7 @@ const HeroTextSection: React.FC = () => {
   const keywords = ["artes", "ciencias"];
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 400);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -21,7 +21,7 @@ const HeroTextSection: React.FC = () => {
   }, []);
 
   const pdfURL =
-    "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025%20(1).pdf#view=FitH";
+    "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025.pdf#view=FitH";
 
   return (
     <section className={styles.heroSection} id="hero-section">

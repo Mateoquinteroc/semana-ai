@@ -7,7 +7,7 @@ const HeroTextSection: React.FC = () => {
   const keywords = ["artes", "ciencias"];
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    const checkMobile = () => setIsMobile(window.innerWidth <= 400);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);

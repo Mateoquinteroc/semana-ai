@@ -46,14 +46,14 @@ const HeroTextSection: React.FC = () => {
             Términos
           </a>
 
-          <a
+          {/* <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdkcFO6b4i6SzdHfBGwuovRVphXSJWYxDAYVnPfcamcyRyClQ/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
             className={`${styles.heroButton} ${styles.applyButton}`}
           >
             Postúlate
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

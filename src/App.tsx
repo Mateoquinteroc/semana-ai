@@ -4,10 +4,9 @@ import Fondo from './components/Fondo/Fondo';
 import styles from './App.module.css';
 
 import HeroTextSection from './components/HeroTextSection/HeroTextSection';
-import ThematicLinesSection from './components/ThematicLinesSection/ThematicLinesSection';
 import PDFViewerSection from './components/PDFViewerSection/PDFViewerSection';
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
-import Timeline from './components/Timeline/Timeline';
+import SecondChange from './components/SecondChange/SecondChange';
 
 function AppWrapper() {
   const location = useLocation();
@@ -27,13 +26,12 @@ function AppWrapper() {
             element={
               <>
                 <HeroTextSection />
-                <ThematicLinesSection />
+                <SecondChange />
               </>
             }
           />
           <Route path="/documento" element={<PDFViewerSection />} />
         </Routes>
-        {location.pathname !== '/documento' && <Timeline/>}
       </div>
     </>
   );

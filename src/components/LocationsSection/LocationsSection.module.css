@@ -1,0 +1,108 @@
+.section {
+  width: 100%;
+  padding: 48px 0 20px 0;
+}
+.title {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2.2rem;
+  letter-spacing: -1px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: #181b1f;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #0007;
+  width: 420px;
+  min-width: 320px;
+  max-width: 99vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 14px;
+  transition: box-shadow 0.16s, transform 0.13s;
+}
+.card:hover {
+  box-shadow: 0 12px 44px #21e87f99;
+  transform: translateY(-3px) scale(1.017);
+}
+.mapImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  display: block;
+  background: #23272f;
+}
+.cardFooter {
+  padding: 22px 22px 28px 22px;
+  background: #1a1a1a;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.locationName {
+  font-size: 1.23rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.locationAddress {
+  font-size: 1.04rem;
+  color: #b0e6cd;
+  margin-bottom: 18px;
+}
+.gmapsButton {
+  background: #21e87f;
+  color: #181b1f;
+  font-weight: 700;
+  border-radius: 16px;
+  padding: 12px 26px;
+  text-decoration: none;
+  font-size: 1.08rem;
+  display: inline-block;
+  margin-top: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px #13bb6d22;
+  transition: background 0.18s, color 0.18s, box-shadow 0.12s;
+  border: none;
+  outline: none;
+}
+.gmapsButton:hover,
+.gmapsButton:focus {
+  background: #13bb6d;
+  color: #fff;
+  box-shadow: 0 4px 16px #21e87f44;
+}
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .card {
+    width: 98vw;
+    max-width: 520px;
+    min-width: 0;
+  }
+  .mapImg {
+    height: 170px;
+  }
+  .cardFooter {
+    padding: 16px 14px 22px 14px;
+  }
+}

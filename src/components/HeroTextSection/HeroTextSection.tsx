@@ -42,7 +42,7 @@ const HeroTextSection: React.FC = () => {
             target={isMobile ? "_self" : "_blank"}
             rel="noopener noreferrer"
             className={`${styles.heroButton} ${styles.termsButton}`}
-          >
+            >
             Términos
           </a>
 
@@ -51,9 +51,9 @@ const HeroTextSection: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={`${styles.heroButton} ${styles.applyButton}`}
-          >
+            >
             Postúlate
-          </a> */}
+            </a> */}
         </div>
       </div>
     </section>

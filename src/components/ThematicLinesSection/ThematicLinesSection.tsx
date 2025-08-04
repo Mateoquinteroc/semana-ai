@@ -57,8 +57,8 @@ const ThematicLinesSection: React.FC = () => {
     <section id="tarjetas" className={styles.section}>
       <h2 className={styles.title}>¡Gracias por postular sus ponencias y experiencias!</h2>
       <p className={styles.description}>
-      <strong>¿Estás explorando los límites entre la inteligencia artificial, el arte y la ciencia?</strong> La convocatoria para la Semana de la Inteligencia Artificial en la Ciencia y el Arte ya cerró y recibimos 20 propuestas llenas de ideas, preguntas y formas de imaginar el presente y futuro con IA. Ahora estamos en proceso de selección y muy pronto les contaremos quiénes harán parte de esta edición. 
-      <br/>Una iniciativa del Centro Cultural del Banco de la República y el Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas.
+        <strong>¿Estás explorando los límites entre la inteligencia artificial, el arte y la ciencia?</strong> La convocatoria para la Semana de la Inteligencia Artificial en la Ciencia y el Arte ya cerró y recibimos 20 propuestas llenas de ideas, preguntas y formas de imaginar el presente y futuro con IA. Ahora estamos en proceso de selección y muy pronto les contaremos quiénes harán parte de esta edición.
+        <br />Una iniciativa del Centro Cultural del Banco de la República y el Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas.
       </p>
 
       <h3 className={styles.subtitle}>Líneas Temáticas</h3>
@@ -73,5 +73,3 @@ const ThematicLinesSection: React.FC = () => {
 };
 
 export default ThematicLinesSection;
-
-

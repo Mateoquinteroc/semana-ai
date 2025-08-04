@@ -1,43 +1,150 @@
-import React from "react";
+"use client";
+import { useState , useEffect } from "react";
 import styles from "./ProgramacionSection.module.css";
 
-const schedule = [
-  { hora: "09:00", lugar: "Auditorio Principal", evento: "Ceremonia de Apertura", ponente: "Autoridades" },
-  { hora: "10:00", lugar: "Sala 1", evento: "Charla: IA en la Medicina", ponente: "Dra. Eleanor Vance" },
-  { hora: "11:00", lugar: "Sala 2", evento: "Taller: Introducción a Machine Learning", ponente: "Profesor Alex Ryder" },
-  { hora: "14:00", lugar: "Galería de Arte", evento: "Presentación: Arte Generativo con IA", ponente: "Dra. Anya Petrova" },
-  { hora: "16:00", lugar: "Sala 1", evento: "Networking y Café", ponente: "Todos" },
-  { hora: "17:00", lugar: "Auditorio Principal", evento: "Charla: Ética en la IA", ponente: "Jordan Lee" },
-];
+// Días de la semana
+const DIAS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"] as const;
+type Dia = typeof DIAS[number];
 
-const ProgramacionSection: React.FC = () => {
+interface Evento {
+  dia: Dia;
+  hora: string;
+  lugar: string;
+  evento: string;
+  tipo: string;
+  ponente: string;
+}
+
+// Agrupa eventos por día
+function agrupaPorDia(rows: Evento[]): Record<Dia, Evento[]> {
+  return DIAS.reduce((acc, dia) => {
+    acc[dia] = rows.filter((row) => row.dia === dia);
+    return acc;
+  }, {} as Record<Dia, Evento[]>);
+}
+
+function getSelectedByFechaHoy(): Dia {
+  const hoy = new Date();
+  const inicio = new Date(2025, 7, 11);
+  const fin = new Date(2025, 7, 15);
+  if (hoy >= inicio && hoy <= fin) {
+    const diaNum = hoy.getDate() - 11;
+    if (diaNum >= 0 && diaNum < DIAS.length) {
+      return DIAS[diaNum];
+    }
+  }
+  return "Lunes";
+}
+
+export default function ProgramacionSection() {
+  const [DATA, setDATA] = useState<Record<Dia, Evento[]>>({
+    Lunes: [],
+    Martes: [],
+    Miércoles: [],
+    Jueves: [],
+    Viernes: [],
+  });
+  const [selected, setSelected] = useState<Dia>(getSelectedByFechaHoy());
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    const fetchSheet = async () => {
+      setCargando(true);
+      const res = await fetch(
+        // TU URL DE GOOGLE SHEET COMO CSV
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQjyRAQk-X5m7As9Dda63qTDt-U409ERL7PvMawbPb7fJ-LVGIsZ99N0UJfpLaqLylKeI3AELmNdRbI/pub?output=csv"
+      );
+      const text = await res.text();
+      const clean = (str: string) => str.replace(/^"(.*)"$/, "$1").trim();
+
+      // Lee el encabezado y filas: Dia,Hora,Lugar,Evento,Tipo,Ponente
+      const [...rows] = text.trim().split("\n");
+      const eventos: Evento[] = rows
+        .map((row) => {
+          const [dia, hora, lugar, evento, tipo, ponente] = row.split(",");
+          return {
+            dia: clean(dia) as Dia,
+            hora: clean(hora),
+            lugar: clean(lugar),
+            evento: clean(evento),
+            tipo: clean(tipo),
+            ponente: clean(ponente),
+          };
+        })
+        .filter((ev) => DIAS.includes(ev.dia));
+      setDATA(agrupaPorDia(eventos));
+      setCargando(false);
+    };
+    fetchSheet();
+  }, []);
+
   return (
-    <section className={styles.section} id="programming">
-      <h2 className={styles.title}>Programación</h2>
-      <div className={styles.tableWrapper}>
-        <table className={styles.table}>
-          <thead>
-            <tr>
-              <th>Hora</th>
-              <th>Lugar</th>
-              <th>Evento</th>
-              <th>Ponente</th>
-            </tr>
-          </thead>
-          <tbody>
-            {schedule.map((item, index) => (
-              <tr key={index}>
-                <td>{item.hora}</td>
-                <td>{item.lugar}</td>
-                <td>{item.evento}</td>
-                <td>{item.ponente}</td>
+    <div className={styles.sectionWrapper} id="programming">
+      <div className={styles.card}>
+        <h2 className={styles.titulo}>Programación</h2>
+        <div className={styles.tabsWrapper}>
+          {DIAS.map((dia) => (
+            <button
+              key={dia}
+              className={`${styles.tab} ${selected === dia ? styles.tabActive : ""}`}
+              onClick={() => setSelected(dia)}
+              type="button"
+            >
+              {dia}
+            </button>
+          ))}
+        </div>
+        <div className={styles.tableWrapper}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th className={styles.th}>Hora</th>
+                <th className={styles.th}>Lugar</th>
+                <th className={styles.th}>Evento</th>
+                <th className={styles.th}>Tipo</th>
+                <th className={styles.th}>Ponente</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cargando ? (
+                <tr>
+                  <td colSpan={5} className={styles.noData}>
+                    Cargando datos...
+                  </td>
+                </tr>
+              ) : DATA[selected].length === 0 ? (
+                <tr>
+                  <td colSpan={5} className={styles.noData}>
+                    No hay eventos registrados para este día.
+                  </td>
+                </tr>
+              ) : (
+                DATA[selected].map((row, i) => (
+                  <tr key={`${selected}-${i}`} className={styles.fila}>
+                    <td className={styles.tdHora}>{row.hora}</td>
+                    <td className={styles.td}>{row.lugar}</td>
+                    <td className={styles.td}>
+                      <div className={styles.eventoScroll}>{row.evento}</div>
+                    </td>
+                    <td className={styles.td}>
+                      <span
+                        className={
+                          row.tipo === "Charla"
+                            ? styles.badgeCharla
+                            : styles.badgeTaller
+                        }
+                      >
+                        {row.tipo}
+                      </span>
+                    </td>
+                    <td className={styles.td}>{row.ponente}</td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </section>
+    </div>
   );
-};
-
-export default ProgramacionSection;
+}

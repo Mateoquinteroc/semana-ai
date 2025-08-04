@@ -1,60 +1,209 @@
-.section {
-    padding: 4rem 1rem;
-    max-width: 1280px;
-    margin: 0 auto;
-    z-index: 10;
-    position: relative;
+.sectionWrapper {
+  width: 100%;
+  min-height: 60vh;
+  padding: 40px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: none !important;
+}
+
+.card {
+  width: 100%;
+  max-width: 1600px;
+  border-radius: 32px;
+  background: #181b1f;
+  box-shadow: 0 8px 36px #0008;
+  padding: 36px 16px 32px 16px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+
+.titulo {
+  color: #21e87f;
+  font-size: 2.1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.tabsWrapper {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: static !important;
+  min-width: 0;
+  overflow-x: auto;
+  transform: none;
+}
+
+.tab {
+  display: inline-block;
+  padding: 10px 34px;
+  border-radius: 16px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  background: #23272f;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.18s, color 0.18s, box-shadow 0.16s, outline 0.16s;
+  margin-bottom: 0;
+  position: static !important;
+  text-align: center;
+  transform: translateX(0) !important;
+}
+
+.tab:hover,
+.tab:focus {
+  background: #31343d;
+}
+
+.tabActive {
+  background: #21e87f !important;
+  color: #181b1f !important;
+  font-weight: 700;
+  box-shadow: 0 2px 14px #21e87f66;
+  border: none;
+  outline: none;
+}
+
+.tab:focus-visible {
+  outline: 2.5px solid #21e87f !important;
+  outline-offset: 2px;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.th {
+  color: #21e87f;
+  font-size: 1.04rem;
+  font-weight: bold;
+  padding: 18px 18px 18px 18px;
+  text-align: left;
+  background: transparent;
+  border: none;
+}
+
+.fila {
+  background: transparent;
+  transition: background 0.14s;
+}
+.fila:hover {
+  background: #1e232b;
+}
+
+.td,
+.tdHora {
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 1.06rem;
+  font-weight: 400;
+  border-bottom: 1.1px solid #25292f;
+  border-right: none;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.tdHora {
+  font-weight: bold;
+}
+
+.badgeCharla {
+  background: #1d2637;
+  color: #44aaf7;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  display: inline-block;
+}
+.badgeTaller {
+  background: #2d1d13;
+  color: #e07e33;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.noData {
+  color: #94afc2;
+  text-align: center;
+  padding: 32px 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  background: transparent;
+}
+
+/* Scroll solo para la celda de evento */
+.eventoScroll {
+  max-width: 280px;
+  max-height: 90px;
+  min-height: 48px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding-right: 4px;
+  white-space: pre-line;
+  scrollbar-width: thin;
+  scrollbar-color: #14ffec #222c2e;
+}
+
+.eventoScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+.eventoScroll::-webkit-scrollbar-thumb {
+  background: #14ffec99;
+  border-radius: 4px;
+}
+.eventoScroll::-webkit-scrollbar-track {
+  background: #222c2e;
+}
+
+
+/* Responsive */
+@media (max-width: 700px) {
+  .card {
+    padding: 24px 2vw 18px 2vw;
+    min-width: 0;
+    max-width: 99vw;
   }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-bottom: 3rem;
+  .tabsWrapper {
+    gap: 6px;
+    margin-bottom: 18px;
   }
-  
-  .tableWrapper {
-    overflow-x: auto;
-    background-color: rgba(23, 23, 23, 0.9);
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(100, 100, 100, 0.3);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  .tab {
+    padding: 8px 13px;
+    font-size: 0.96rem;
+    border-radius: 11px;
   }
-  
   .table {
-    width: 100%;
-    border-collapse: collapse;
+    min-width: 470px;
+    font-size: 0.94rem;
   }
-  
-  th {
-    text-align: left;
-    padding: 1rem;
-    font-weight: 600;
-    color: #34d399;
-    font-size: 1rem;
-    border-bottom: 1px solid #333;
+  .eventoScroll {
+    max-width: 120px;
+    font-size: 0.9rem;
   }
-  
-  td {
-    padding: 1rem;
-    color: #e5e7eb;
-    font-size: 0.95rem;
-    border-bottom: 1px solid #333;
-  }
-  
-  @media (max-width: 768px) {
-    .tableWrapper {
-      padding: 1rem;
-    }
-  
-    th, td {
-      padding: 0.75rem;
-      font-size: 0.85rem;
-    }
-  
-    .title {
-      font-size: 2rem;
-    }
-  }
+}

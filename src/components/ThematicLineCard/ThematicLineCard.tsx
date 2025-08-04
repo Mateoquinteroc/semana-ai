@@ -12,11 +12,7 @@ type Props = {
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeInOut" },
-  },
+  visible: { opacity: 1, y: 0 }
 };
 
 const ThematicLineCard: React.FC<Props> = ({
@@ -32,13 +28,12 @@ const ThematicLineCard: React.FC<Props> = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay }}
       className={styles.card}
+      transition={{ duration: 0.6, ease: "easeInOut", delay }} // <-- El delay VA AQUÍ, no en fadeIn!
     >
-     <div className={`${styles.icon} ${styles[iconColor]}`}>
+      <div className={`${styles.icon} ${iconColor ? styles[iconColor] : ""}`}>
         <Icon className="w-8 h-8" />
-    </div>
-
+      </div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
     </motion.div>

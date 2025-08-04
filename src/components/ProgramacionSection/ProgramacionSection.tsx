@@ -1,5 +1,5 @@
 "use client";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ProgramacionSection.module.css";
 
 // Días de la semana
@@ -57,8 +57,8 @@ export default function ProgramacionSection() {
       const text = await res.text();
       const clean = (str: string) => str.replace(/^"(.*)"$/, "$1").trim();
 
-      // Lee el encabezado y filas: Dia,Hora,Lugar,Evento,Tipo,Ponente
-      const [...rows] = text.trim().split("\n");
+      // Lee filas: Dia,Hora,Lugar,Evento,Tipo,Ponente
+      const rows = text.trim().split("\n").slice(1); // Omitir encabezado
       const eventos: Evento[] = rows
         .map((row) => {
           const [dia, hora, lugar, evento, tipo, ponente] = row.split(",");
@@ -77,6 +77,17 @@ export default function ProgramacionSection() {
     };
     fetchSheet();
   }, []);
+
+  // Badge class según tipo/categoría
+  function getBadgeClass(tipo: string) {
+    const val = tipo.toLowerCase();
+    if (val.includes("apertura")) return styles.badgeApertura;
+    if (val.includes("charla") || val.includes("conferencia")) return styles.badgeCharla;
+    if (val.includes("ponencia")) return styles.badgePonencia;
+    if (val.includes("taller")) return styles.badgeTaller;
+    if (val.includes("concierto")) return styles.badgeConcierto;
+    return styles.badgeCharla; // fallback
+  }
 
   return (
     <div className={styles.sectionWrapper} id="programming">
@@ -127,13 +138,7 @@ export default function ProgramacionSection() {
                       <div className={styles.eventoScroll}>{row.evento}</div>
                     </td>
                     <td className={styles.td}>
-                      <span
-                        className={
-                          row.tipo === "Charla"
-                            ? styles.badgeCharla
-                            : styles.badgeTaller
-                        }
-                      >
+                      <span className={getBadgeClass(row.tipo)}>
                         {row.tipo}
                       </span>
                     </td>

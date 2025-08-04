@@ -50,7 +50,7 @@ const participantsData: Participant[] = [
     textColor: styles.textCyan,
   },
   {
-    name: "Luna Luna Herrera",
+    name: "Luna Herrera",
     role: "Docente universitaria, Desarrolladora de software e Investigadora en filosofía",
     initials: "LL",
     day: "Jueves",
@@ -61,14 +61,14 @@ const participantsData: Participant[] = [
     textColor: styles.textGreen,
   },
   {
-    name: "Juan Salazar",
+    name: "Juan José Salazar",
     role: "Músico, Ingeniero de Sonido y Productor Musical",
     initials: "JS",
     day: "Viernes",
     date: "15 de Agosto, 2025",
     bio: "Especializado en composición y producción para medios audiovisuales. Experto en restauración, certificación y biometría de voz para el sector público y privado. Ganador del John Leckie Award for Excellence in Music Production. Docente universitario y productor de música para Discovery, BBC, Disney y Telemundo.",
-    photoUrl: "/Ponentes/Juan Salazar.png",
-    photoColorUrl: "/Ponentes/Juan Salazar color.png",
+    photoUrl: "/Ponentes/Juan Jose.png",
+    photoColorUrl: "/Ponentes/Juan Jose color.png",
     textColor: styles.textCyan,
   },
 ];
@@ -85,7 +85,7 @@ export default function ParticipantsSection() {
 
   return (
     <section className={styles.section} id="speakers">
-      <h2 className={styles.title}>Ponentes y Participantes</h2>
+      <h2 className={styles.title}>Conferencistas</h2>
       <div className={styles.grid}>
         {participantsData.map((p, idx) => (
           <div

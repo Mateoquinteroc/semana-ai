@@ -128,9 +128,27 @@
   font-weight: bold;
 }
 
-.badgeCharla {
+.badgeApertura {
+  background: #23242a;
+  color: #e2e2e2;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  display: inline-block;
+}
+.badgeCharla, .badgeConferencia {
   background: #1d2637;
   color: #44aaf7;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  display: inline-block;
+}
+.badgePonencia {
+  background: #30101b;
+  color: #e9556a;
   font-weight: 600;
   padding: 6px 20px;
   border-radius: 16px;
@@ -140,6 +158,15 @@
 .badgeTaller {
   background: #2d1d13;
   color: #e07e33;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  display: inline-block;
+}
+.badgeConcierto {
+  background: #18321b;
+  color: #21e87f;
   font-weight: 600;
   padding: 6px 20px;
   border-radius: 16px;

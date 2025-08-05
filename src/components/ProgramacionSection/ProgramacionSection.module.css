@@ -10,7 +10,7 @@
 
 .card {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   border-radius: 32px;
   background: #181b1f;
   box-shadow: 0 8px 36px #0008;
@@ -185,7 +185,8 @@
 
 /* Scroll solo para la celda de evento */
 .eventoScroll {
-  max-width: 280px;
+  width: 200px;
+  max-width: 400px;
   max-height: 90px;
   min-height: 48px;
   overflow-x: auto;

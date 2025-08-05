@@ -22,10 +22,3 @@
   padding-bottom: 5rem;
 }
 
-.container :global(button) {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
-}

@@ -26,7 +26,7 @@ const categories: Category[] = [
     targetId: "programming",
   },
   {
-    title: "Ponentes",
+    title: "Conferencistas",
     description: "Conoce a los invitados...",
     icon: Mic2,
     color: "blue",

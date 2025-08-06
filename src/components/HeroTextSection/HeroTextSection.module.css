@@ -1,119 +1,254 @@
 .heroSection {
-    position: relative;
-    width: 90vw;
-    min-height: 90vh;
-    display: flex;
-    align-items: start;
-    padding: 4rem 2rem;
-    font-family: "Advent Pro", sans-serif;
-    overflow: hidden;
+  position: relative;
+  width: 100vw;
+  max-width: 1280px;
+  min-height: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  font-family: "Advent Pro", sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Fondo separado */
+.background {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Capa de texto */
+.heroTextContainer {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  z-index: 10;
+  padding-top: 2rem;
+}
+
+.heroTitle {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 5.5rem;
+  font-weight: bold;
+  display: inline-block;
+  background: linear-gradient(to right, #5ef1c3, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: lighten;
+  margin-bottom: 0.5rem;
+  line-height: 1.05;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.fadeText {
+  display: inline-block;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: opacity 0.5s ease;
+  color: #d1d5db;
+  font-weight: 600;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  max-width: 100%;
+}
+.submitBtn {
+  background: linear-gradient(90deg, #1be782 0%, #1791ff 100%);
+  color: #fff;
+  font-weight: 500;
+  width: 8rem;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 13px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.22s;
+}
+.submitBtn:hover {
+  background: linear-gradient(90deg, #12c2b2 0%, #1791ff 100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
   }
-  
-  
-  /* Fondo separado */
-  .background {
-    right: 0;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-    z-index: 0;
-    mix-blend-mode: overlay;
-    opacity: 0.7;
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
-  
-  /* Capa de texto */
+}
+@media (min-width: 2560px) {
+  .heroSection {
+    padding: 8rem 10vw;
+    min-height: 1200px;
+  }
   .heroTextContainer {
-    position: absolute;
-    max-width: 700px;
-  
-    text-align: left;
-    z-index: 10;
+    max-width: 1100px;
+    padding-top: 5rem;
   }
-  
   .heroTitle {
-    font-family: 'Advent Pro', sans-serif; 
-    font-size: 7rem;
-    font-weight: bold;
-    display: inline-block;
-    background: linear-gradient(to right, #5ef1c3, #3b82f6); /* Verde más oscuro ahora */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    mix-blend-mode: lighten;
-    margin-bottom: 0.5rem;
-    line-height: 1;
+    font-size: 12rem;
+  }
+  .heroSubtitle {
+    font-size: 4.5rem;
   }
   .fadeText {
-    display: inline-block;
-    animation: fadeIn 0.8s ease-in-out;
-    transition: opacity 0.5s ease;
-    color: #d1d5db;
-    font-weight: 600;
+    font-size: 2.5rem;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  
-  @media (min-width: 300px) {
-    .heroTitle {
-      font-size: 3rem;
-    }
-  }
-  @media (min-width: 768px) {
-    .heroTitle {
-      font-size: 7rem;
-    }
-  }
-  
-  .heroSubtitle {
-    font-family: 'Advent Pro', sans-serif; 
-    font-size: 3rem;
-    color: #d1d5db;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-  }
-  
-  .heroButtons {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
   .heroButton {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    text-align: center;
-    transition: all 0.3s ease;
+    font-size: 2rem;
+    padding: 1.2rem 3rem;
   }
-  
-  .termsButton {
-    background-color: #374151;
-    color: #ffffff;
+}
+
+@media (min-width: 3500px) {
+  .heroSection {
+    min-height: 1500px;
+    padding: 12rem 15vw;
   }
-  
-  .termsButton:hover {
-    background-color: #4b5563;
+  .heroTitle {
+    font-size: 17rem;
   }
-  
-  .applyButton {
-    background: linear-gradient(to right, #34d399, #3b82f6);
-    color: #ffffff;
+  .heroSubtitle {
+    font-size: 6rem;
   }
-  
-  .applyButton:hover {
-    background: linear-gradient(to right, #22c55e, #2563eb);
+  .fadeText {
+    font-size: 3.5rem;
   }
-  
+  .heroButton {
+    font-size: 2.8rem;
+    padding: 1.7rem 5rem;
+  }
+}
+
+/* Texto más grande en pantallas realmente grandes */
+@media (min-width: 1440px) {
+  .heroTitle {
+    font-size: 7.5rem;
+  }
+  .heroSubtitle {
+    font-size: 3rem;
+  }
+  .fadeText {
+    font-size: 2rem;
+  }
+  .heroSection {
+    padding: 6rem 4rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .heroTitle {
+    font-size: 9rem;
+    width: 100vw;
+  }
+  .heroSubtitle {
+    font-size: 3.5rem;
+  }
+  .fadeText {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* Breakpoints específicos Macbook */
+@media (max-width: 1280px) {
+  .heroSection {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 3rem 1rem;
+    min-height: 800px;
+    height: 100vh;
+  }
+  .heroTitle {
+    font-size: 4.2rem;
+  }
+  .heroTextContainer {
+    max-width: 600px;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 2.5rem 1rem 2rem 1rem;
+    min-height: 600px;
+    height: auto;
+  }
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  .heroTextContainer {
+    max-width: 95vw;
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroSection {
+    padding: 1.2rem 0.5rem;
+    min-height: 400px;
+  }
+  .heroTitle {
+    font-size: 2.1rem;
+  }
+}
+
+/* Subtítulo y botones */
+.heroSubtitle {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 2.1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+.heroButtons {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heroButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.termsButton {
+  background-color: #374151;
+  color: #ffffff;
+}
+.termsButton:hover {
+  background-color: #4b5563;
+}
+
+.applyButton {
+  background: linear-gradient(to right, #34d399, #3b82f6);
+  color: #ffffff;
+}
+.applyButton:hover {
+  background: linear-gradient(to right, #22c55e, #2563eb);
+}

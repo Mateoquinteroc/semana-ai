@@ -48,7 +48,7 @@ const EventCategories: React.FC = () => {
   };
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="categories">
       <div className={styles.grid}>
         {categories.map(({ title, description, icon: Icon, color, targetId }) => (
           <div

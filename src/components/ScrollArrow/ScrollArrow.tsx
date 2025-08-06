@@ -21,7 +21,7 @@ const ScrollArrow: React.FC = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    const target = document.getElementById("tarjetas");
+    const target = document.getElementById("categories");
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }

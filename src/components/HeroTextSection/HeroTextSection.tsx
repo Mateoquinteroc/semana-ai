@@ -16,12 +16,17 @@ const HeroTextSection: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setKeywordIndex((prev) => (prev + 1) % keywords.length);
-    }, 3000); // Cambia cada 3 segundos
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const pdfURL =
-    "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025.pdf#view=FitH";
+  const pdfURL = "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025.pdf#view=FitH";
+
+  // --- Scroll suave a Formulario ---
+  const scrollToForm = () => {
+    const el = document.getElementById("registro-formulario");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className={styles.heroSection} id="hero-section">
@@ -42,18 +47,17 @@ const HeroTextSection: React.FC = () => {
             target={isMobile ? "_self" : "_blank"}
             rel="noopener noreferrer"
             className={`${styles.heroButton} ${styles.termsButton}`}
-            >
+          >
             Términos
           </a>
-
-          {/* <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdkcFO6b4i6SzdHfBGwuovRVphXSJWYxDAYVnPfcamcyRyClQ/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${styles.heroButton} ${styles.applyButton}`}
-            >
-            Postúlate
-            </a> */}
+          {/* Nuevo botón INSCRÍBETE */}
+          <button
+            type="button"
+            onClick={scrollToForm}
+            className={styles.submitBtn}
+          >
+            Inscríbete
+          </button>
         </div>
       </div>
     </section>

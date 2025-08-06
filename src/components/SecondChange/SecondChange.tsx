@@ -3,6 +3,7 @@ import EventCategories from "../EventCategories/EventCategories";
 import LocationsSection from "../LocationsSection/LocationsSection";
 import ParticipantsSection from "../ParticipantsSection/ParticipantsSection";
 import ProgramacionSection from "../ProgramacionSection/ProgramacionSection";
+import RegistroForm from "../RegistroForm/RegistroForm";
 import ThematicLinesSection from "../ThematicLinesSection/ThematicLinesSection";
 export default function SecondChange() {
     return (
@@ -13,6 +14,7 @@ export default function SecondChange() {
             <ProgramacionSection />
             <ParticipantsSection />
             <LocationsSection />
+            <RegistroForm />
         </div>
     );
 }

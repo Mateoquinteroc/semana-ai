@@ -9,8 +9,8 @@
 }
 
 .card {
-  width: 100%;
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1200px;
   border-radius: 32px;
   background: #181b1f;
   box-shadow: 0 8px 36px #0008;
@@ -215,7 +215,7 @@
   .card {
     padding: 24px 2vw 18px 2vw;
     min-width: 0;
-    max-width: 99vw;
+    max-width: 80vw;
   }
   .tabsWrapper {
     gap: 6px;

@@ -15,7 +15,6 @@ interface Evento {
   ponente: string;
 }
 
-// Agrupa eventos por día
 function agrupaPorDia(rows: Evento[]): Record<Dia, Evento[]> {
   return DIAS.reduce((acc, dia) => {
     acc[dia] = rows.filter((row) => row.dia === dia);
@@ -86,7 +85,7 @@ export default function ProgramacionSection() {
     if (val.includes("ponencia")) return styles.badgePonencia;
     if (val.includes("taller")) return styles.badgeTaller;
     if (val.includes("concierto")) return styles.badgeConcierto;
-    return styles.badgeCharla; // fallback
+    return styles.badgeCharla;
   }
 
   return (
@@ -105,6 +104,8 @@ export default function ProgramacionSection() {
             </button>
           ))}
         </div>
+
+        {/* Desktop/Tablet: Tabla tradicional */}
         <div className={styles.tableWrapper}>
           <table className={styles.table}>
             <thead>
@@ -148,6 +149,25 @@ export default function ProgramacionSection() {
               )}
             </tbody>
           </table>
+        </div>
+
+        {/* MÓVIL: Lista de tarjetas compacta */}
+        <div className={styles.mobileEventosList}>
+          {cargando ? (
+            <div className={styles.noData}>Cargando datos...</div>
+          ) : DATA[selected].length === 0 ? (
+            <div className={styles.noData}>No hay eventos registrados para este día.</div>
+          ) : (
+            DATA[selected].map((row, i) => (
+              <div key={i} className={styles.mobileEventoCard}>
+                <div className={styles.mobileEventoHora}>{row.hora}</div>
+                <div className={styles.mobileEventoTitulo}>{row.evento}</div>
+                <div className={styles.mobileEventoPonente}>{row.ponente}</div>
+                <div className={styles.mobileEventoLugar}>{row.lugar}</div>
+                {/* Puedes agregar más campos o botón de detalles aquí */}
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>

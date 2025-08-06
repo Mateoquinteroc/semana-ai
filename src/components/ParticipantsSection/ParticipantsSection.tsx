@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Variants } from "framer-motion";
 import styles from "./ParticipantsSection.module.css";
 
@@ -83,6 +83,16 @@ export default function ParticipantsSection() {
   const [active, setActive] = useState<number | null>(null);
   const [hovered, setHovered] = useState<number | null>(null);
 
+  // Bloquea el scroll en móvil cuando la tarjeta está abierta
+  useEffect(() => {
+    if (active !== null && window.innerWidth <= 700) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [active]);
+
   return (
     <section className={styles.section} id="speakers">
       <h2 className={styles.title}>Conferencistas</h2>
@@ -125,9 +135,9 @@ export default function ParticipantsSection() {
           </div>
         ))}
       </div>
-      <div className={styles.cardZone}>
-        <AnimatePresence mode="wait">
-          {active !== null && (
+      <AnimatePresence mode="wait">
+        {active !== null && (
+          <div className={styles.cardZone}>
             <motion.div
               key={active}
               className={styles.expandCard}
@@ -135,6 +145,9 @@ export default function ParticipantsSection() {
               animate="visible"
               exit="exit"
               variants={cardVariants}
+              role="alertdialog"
+              aria-modal="true"
+              tabIndex={-1}
             >
               <div className={styles.cardHeader}>
                 <span className={styles.cardName}>{participantsData[active].name}</span>
@@ -144,19 +157,18 @@ export default function ParticipantsSection() {
               </div>
               <div className={styles.cardRole}>{participantsData[active].role}</div>
               <div className={styles.cardBio}>{participantsData[active].bio}</div>
-                            <a
+              <button
                 className={styles.closeBtn}
                 aria-label="Cerrar"
                 onClick={() => setActive(null)}
-                tabIndex={0}
                 type="button"
               >
                 ×
-              </a>
+              </button>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

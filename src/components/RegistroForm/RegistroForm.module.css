@@ -69,8 +69,18 @@
 }
 @media (max-width: 600px) {
   .formWrapper {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 500px) {
+  .formWrapper {
+    max-width: 80vw;
+  }
+}
+@media (max-width: 400px) {
+  .formWrapper {
     justify-self: center;
-    max-width: 98vw;
+    max-width: 70vw;
     margin: 20px 0;
     padding: 18px 5vw 20px 5vw;
     border-radius: 12px;

@@ -1,5 +1,6 @@
 import AboutSection from "../AboutSection/AboutSection";
 import EventCategories from "../EventCategories/EventCategories";
+import LiveEmbed from "../LiveEmbed/LiveEmbed";
 import LocationsSection from "../LocationsSection/LocationsSection";
 import ParticipantsSection from "../ParticipantsSection/ParticipantsSection";
 import ProgramacionSection from "../ProgramacionSection/ProgramacionSection";
@@ -15,6 +16,11 @@ export default function SecondChange() {
             <ParticipantsSection />
             <LocationsSection />
             <RegistroForm />
+            <LiveEmbed 
+            channelId="UCJtTIceoWSvf7jeHYihvhcA" 
+            title="En directo desde nuestro canal"
+            channelUrl="https://www.youtube.com/@CentroDeCienciaFJC"
+            />
         </div>
     );
 }

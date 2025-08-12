@@ -60,7 +60,7 @@ const LiveEmbed: React.FC<LiveEmbedProps> = ({
   const embedUrl = `https://www.youtube.com/embed/live_stream?channel=${channelId}&autoplay=1&mute=1`;
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id='live-stream'>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.container}>
         <div className={styles.badge}>EN VIVO</div>

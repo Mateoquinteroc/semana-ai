@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./EventCategories.module.css";
-import { BrainCircuit, CalendarDays, Mic2, MapPin } from "lucide-react";
+import { BrainCircuit, CalendarDays, Mic2, MapPin, Radio } from "lucide-react";
 
 interface Category {
   title: string;
@@ -38,6 +38,13 @@ const categories: Category[] = [
     icon: MapPin,
     color: "pink",
     targetId: "locations",
+  },
+  {
+    title: "Transmisión en Vivo",
+    description: "Sigue el evento en tiempo real...",
+    icon: Radio,
+    color: "red",
+    targetId: "live-stream",
   },
 ];
 

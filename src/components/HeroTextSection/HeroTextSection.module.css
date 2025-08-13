@@ -8,7 +8,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   font-family: "Advent Pro", sans-serif;
   overflow: hidden;
   box-sizing: border-box;
@@ -35,7 +35,7 @@
   width: 100%;
   text-align: left;
   z-index: 10;
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .heroTitle {
@@ -80,6 +80,22 @@
 }
 .submitBtn:hover {
   background: linear-gradient(90deg, #12c2b2 0%, #1791ff 100%);
+}
+.submitBtntaller {
+  background: linear-gradient(90deg, #1791ff 0%, #e2e529 100%);
+  color: #fff;
+  font-weight: 500;
+  width: auto;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 13px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.22s;
+}
+.submitBtntaller:hover {
+  background: linear-gradient(90deg, #e2e529 0%, #1791ff 100%);
 }
 
 @keyframes fadeIn {

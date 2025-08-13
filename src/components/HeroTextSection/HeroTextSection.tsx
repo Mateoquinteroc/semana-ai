@@ -22,6 +22,8 @@ const HeroTextSection: React.FC = () => {
 
   const pdfURL = "/Convocatoria%20ponencias%20y%20experiencias%20Semana%20I.A.%202025.pdf#view=FitH";
 
+  const tallerManuela = "https://forms.gle/yFHocB8sHXasuoLf9"
+
   // --- Scroll suave a Formulario ---
   const scrollToForm = () => {
     const el = document.getElementById("registro-formulario");
@@ -50,7 +52,6 @@ const HeroTextSection: React.FC = () => {
           >
             Términos
           </a>
-          {/* Nuevo botón INSCRÍBETE */}
           <button
             type="button"
             onClick={scrollToForm}
@@ -58,6 +59,14 @@ const HeroTextSection: React.FC = () => {
           >
             Inscríbete
           </button>
+          <a
+            href={tallerManuela}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.submitBtntaller}
+          >
+            Inscripción Taller jueves 14
+          </a>
         </div>
       </div>
     </section>

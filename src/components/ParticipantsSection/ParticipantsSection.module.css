@@ -257,7 +257,7 @@
 /* Responsive para grid y celdas */
 @media (max-width: 1920px) {
   .grid { gap: 22px; }
-  .cell { width: 160px; }
+  .cell { width: 200px; }
   .circle { width: 130px; height: 130px; font-size: 2.5rem; }
   .cardDate {margin-top: 3rem;}
   .closeBtn {margin: 0; padding: 5px;}

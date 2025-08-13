@@ -44,7 +44,7 @@ const LiveEmbed: React.FC<LiveEmbedProps> = ({
 
   if (!isVisible) {
     return (
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} id='live-stream'>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.offline}>
           <p>La transmisión en vivo terminó por hoy.</p>

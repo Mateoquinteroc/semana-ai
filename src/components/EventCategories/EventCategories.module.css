@@ -1,6 +1,6 @@
 .section {
     padding: 4rem 1rem;
-    max-width: 1280px;
+    max-width: 1500px;
     margin: 0 auto;
     z-index: 10;
     position: relative;
@@ -70,4 +70,10 @@
 .description {
     font-size: 0.95rem;
     color: #d1d5db;
+}
+
+@media (max-width: 1400px) {
+  .section{
+    max-width: 1200px;
+  }
 }

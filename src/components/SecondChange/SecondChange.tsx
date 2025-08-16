@@ -1,6 +1,5 @@
 import AboutSection from "../AboutSection/AboutSection";
 import EventCategories from "../EventCategories/EventCategories";
-import LiveEmbed from "../LiveEmbed/LiveEmbed";
 import LocationsSection from "../LocationsSection/LocationsSection";
 import ParticipantsSection from "../ParticipantsSection/ParticipantsSection";
 import ProgramacionSection from "../ProgramacionSection/ProgramacionSection";

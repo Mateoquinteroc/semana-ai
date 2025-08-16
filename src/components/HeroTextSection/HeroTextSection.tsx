@@ -59,14 +59,6 @@ const HeroTextSection: React.FC = () => {
           >
             Inscríbete
           </button>
-          <a
-            href={tallerManuela}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.submitBtntaller}
-          >
-            Inscripción Taller jueves 14
-          </a>
         </div>
       </div>
     </section>

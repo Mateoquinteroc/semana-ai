@@ -8,17 +8,17 @@
   background: linear-gradient(to bottom right, #0f172a, #14532d, #1e3a8a);
   background-repeat: no-repeat;
   background-size: cover;
-  pointer-events: none; /* evita bloquear clicks */
+  pointer-events: none;
+  /* evita bloquear clicks */
 }
 
 .container {
   position: relative;
   z-index: 10;
-  width: 100%; /* ✅ usar 100% en lugar de 100vw */
+  width: 100%;
+  /* ✅ usar 100% en lugar de 100vw */
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-  padding-bottom: 5rem;
 }
-

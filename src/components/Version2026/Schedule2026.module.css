@@ -1,0 +1,130 @@
+.section {
+    border-bottom: 1px solid #1a1a1a;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.sidebar {
+    padding: 2rem;
+    border-bottom: 1px solid #1a1a1a;
+    background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 33.333333%;
+        padding: 4rem;
+        border-bottom: none;
+        border-right: 1px solid #1a1a1a;
+    }
+}
+
+.sidebarTitle {
+    font-size: 3.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    position: sticky;
+    top: 6rem;
+}
+
+.sidebarSub {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-top: 2rem;
+    opacity: 0.4;
+}
+
+.list {
+    flex: 1;
+}
+
+.item {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: default;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+@media (min-width: 1024px) {
+    .item {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .item {
+        flex-direction: row;
+    }
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.timeContainer {
+    width: 8rem;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.itemContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.itemTitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.location {
+    font-size: 10px;
+    font-weight: 700;
+    border: 1px solid currentColor;
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+}
+
+.itemDescription {
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.6;
+    line-height: 1.5;
+    max-width: 36rem;
+}

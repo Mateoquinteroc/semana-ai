@@ -1,0 +1,123 @@
+.section {
+    border-bottom: 1px solid #1a1a1a;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 6rem;
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 0.75rem 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    outline: none;
+}
+
+.input::placeholder {
+    opacity: 0.2;
+}
+
+.select {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(26, 26, 26, 0.2);
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    outline: none;
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    transition: background-color 0.2s;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.submitBtn:hover {
+    background-color: #333333;
+}
+
+.icon {
+    transition: transform 0.2s;
+}
+
+.submitBtn:hover .icon {
+    transform: translateX(0.5rem);
+}

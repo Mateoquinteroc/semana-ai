@@ -1,0 +1,287 @@
+.page {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.header {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 50;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    color: #1a1a1a;
+    z-index: 100;
+}
+
+.backBtn:hover {
+    opacity: 0.5;
+}
+
+.backBtnLabel {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a;
+}
+
+.docRef {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    opacity: 0.4;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .main {
+        padding: 6rem 2rem;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.introTag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: rgba(26, 26, 26, 0.4);
+}
+
+.introTitle {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: .9;
+}
+
+@media (min-width: 768px) {
+    .introTitle {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .introTitle {
+        font-size: 4.5rem;
+    }
+}
+
+.introLead {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.7;
+    border-left: 4px solid #1a1a1a;
+    padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+    .introLead {
+        font-size: 1.25rem;
+        padding-left: 1.5rem;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.contentBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 1rem;
+}
+
+.objGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .objGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.objItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.objNum {
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(26, 26, 26, 0.3);
+}
+
+.objTitle {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.objDesc {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.itemCard {
+    padding: 2.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid rgba(26, 26, 26, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.itemCard:hover {
+    background-color: #1a1a1a;
+}
+
+.itemCard:hover h3,
+.itemCard:hover p {
+    color: #ffffff;
+}
+
+.itemCard h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.itemCard p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.cronGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .cronGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.cronItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: default;
+    border: 1px solid transparent;
+}
+
+.cronItem:hover {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.cronItem:hover .cronLabel,
+.cronItem:hover .cronValue {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.cronLabel {
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.cronValue {
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #333333;
+}

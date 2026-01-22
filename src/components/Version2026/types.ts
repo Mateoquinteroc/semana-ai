@@ -1,9 +1,15 @@
 
+export const DIAS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"] as const;
+export type Dia = typeof DIAS[number];
+
 export interface ScheduleItem {
+    dia: Dia;
     time: string;
-    title: string;
-    description: string;
     location: string;
+    title: string;
+    tipo: string;
+    ponente: string;
+    description?: string;
 }
 
 export interface Speaker {

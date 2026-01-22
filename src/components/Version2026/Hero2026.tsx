@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './Hero2026.module.css';
+import CustomAlert2026 from './CustomAlert2026';
+import { isFormAvailable, FORM_CONFIG } from './config';
 
 interface HeroProps {
     onShowTerms: () => void;
 }
 
 const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
+    const [showAlert, setShowAlert] = React.useState(false);
+
     return (
         <section className={styles.hero}>
             <div className={styles.container}>
@@ -33,14 +37,18 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                             >
                                 Términos de Referencia
                             </button>
-                            <a
-                                href="https://forms.gle/QidyC3dyxECYV5jr6"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                onClick={() => {
+                                    if (isFormAvailable()) {
+                                        window.open(FORM_CONFIG.formLink, '_blank');
+                                    } else {
+                                        setShowAlert(true);
+                                    }
+                                }}
                                 className={`${styles.btn} ${styles.btnPrimary}`}
                             >
                                 Postúlate
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -55,6 +63,12 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                     </div>
                 </div>
             </div>
+
+            <CustomAlert2026
+                isOpen={showAlert}
+                onClose={() => setShowAlert(false)}
+                message="Este formulario estará disponible el 2 de febrero."
+            />
         </section>
     );
 };

@@ -1,26 +1,7 @@
 
 import { ScheduleItem, Speaker } from './types';
 
-export const SCHEDULE: ScheduleItem[] = [
-    {
-        time: "09:00",
-        title: "The Latent Space",
-        description: "Opening keynote on the hidden dimensions of AI creativity.",
-        location: "HALL A"
-    },
-    {
-        time: "11:00",
-        title: "Ethics of the Ghost",
-        description: "A roundtable discussion on the philosophical implications of AGI.",
-        location: "AUDITORIUM"
-    },
-    {
-        time: "15:00",
-        title: "Synthetic Vision",
-        description: "Masterclass on prompt engineering as a contemporary art medium.",
-        location: "STUDIO 4"
-    }
-];
+export const SCHEDULE: ScheduleItem[] = [];
 
 export const SPEAKERS: Speaker[] = [
     {

@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './TermsOfReference2026.module.css';
+import CustomAlert2026 from './CustomAlert2026';
+import { isFormAvailable, FORM_CONFIG } from './config';
 
 interface TermsProps {
     onBack: () => void;
 }
 
 const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
+    const [showAlert, setShowAlert] = useState(false);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -89,7 +93,13 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
 
                     <footer style={{ paddingTop: '5rem' }}>
                         <button
-                            onClick={() => window.open('https://forms.gle/QidyC3dyxECYV5jr6', '_blank')}
+                            onClick={() => {
+                                if (isFormAvailable()) {
+                                    window.open(FORM_CONFIG.formLink, '_blank');
+                                } else {
+                                    setShowAlert(true);
+                                }
+                            }}
                             className={styles.submitBtn}
                         >
                             Ir al formulario de envío
@@ -98,6 +108,12 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                     </footer>
                 </div>
             </main>
+
+            <CustomAlert2026
+                isOpen={showAlert}
+                onClose={() => setShowAlert(false)}
+                message="Este formulario estará disponible el 2 de febrero."
+            />
         </div>
     );
 };

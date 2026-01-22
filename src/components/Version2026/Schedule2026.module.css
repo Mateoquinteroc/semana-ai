@@ -52,10 +52,10 @@
 }
 
 .item {
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     transition: background-color 0.2s, color 0.2s;
     cursor: default;
     border-bottom: 1px solid #1a1a1a;
@@ -63,7 +63,7 @@
 
 @media (min-width: 1024px) {
     .item {
-        padding: 3rem;
+        padding: 2rem 3rem;
     }
 }
 
@@ -100,25 +100,48 @@
 
 .itemHeader {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.75rem;
     align-items: flex-start;
 }
 
+@media (min-width: 768px) {
+    .itemHeader {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.itemMeta {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .itemTitle {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .itemTitle {
+        font-size: 1.5rem;
+    }
 }
 
 .location {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
     border: 1px solid currentColor;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.4rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     opacity: 0.5;
+    white-space: nowrap;
 }
 
 .itemDescription {
@@ -127,4 +150,85 @@
     opacity: 0.6;
     line-height: 1.5;
     max-width: 36rem;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #1a1a1a;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tab {
+    padding: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-right: 1px solid #1a1a1a;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    color: #000000;
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+.tabStacked {
+    flex: 0 0 44px;
+    background-color: #f0f0f0;
+    opacity: 0.6;
+    font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .tab {
+        font-size: 0.75rem;
+        padding: 1rem 1.5rem;
+        flex: 0 0 auto;
+    }
+
+    .tabStacked {
+        flex: 0 0 auto;
+        background-color: transparent;
+        opacity: 1;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .tabs {
+        overflow-x: auto;
+    }
+}
+
+.tabActive {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.noData {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid currentColor;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    border-radius: 999px;
 }

@@ -126,7 +126,7 @@ const WormholeAnimation2026: React.FC = () => {
                     // Frustum culling
                     if (z2 > -280 && z2 < 280 && px > 0 && px < width && py > 0 && py < height) {
                         const alpha = this.alphaBase * (1 - i / this.length) * ((z2 + 300) / 600);
-                        const size = Math.floor(16 * scale); // Increased base size from 10 to 16
+                        const size = Math.floor((isMobile ? 22 : 16) * scale);
 
                         if (size > 7) { // Adjusted threshold for dot optimization
                             if (size !== lastSize) {

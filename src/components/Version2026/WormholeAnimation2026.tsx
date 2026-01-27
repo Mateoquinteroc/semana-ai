@@ -59,7 +59,6 @@ const WormholeAnimation2026: React.FC = () => {
         const viewerDistance = 300;
 
         let cx: number, sx: number, cy: number, sy: number, cz: number, sz: number;
-        const pt = { x: 0, y: 0, z: 0, s: 0 }; // Reusable point buffer
 
         class TensorChain {
             h: number;

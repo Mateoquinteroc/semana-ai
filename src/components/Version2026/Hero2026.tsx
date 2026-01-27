@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Hero2026.module.css';
 import CustomAlert2026 from './CustomAlert2026';
 import { isFormAvailable, FORM_CONFIG } from './config';
+import WormholeAnimation2026 from './WormholeAnimation2026';
 
 interface HeroProps {
     onShowTerms: () => void;
@@ -54,13 +55,7 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                 </div>
 
                 <div className={`${styles.imageSection} grainy-overlay`}>
-                    <div
-                        className={styles.bgImage}
-                        style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDhVHWZTdW048KBmIezIIJtYQEiVm7BPJRXwQ9jKUrjyX4RaknCw3WWGdvIse5kml5enPkQ-ayH9T0s389XH6ik5sPuEsgO0lqdGj3uecgI9Bq4z8CtC85cfzhajfYqJoo3D26KbUxNuSKu63zNBtUOFbRtLRnrPkEs00mzvURZ3BkNlwZqFPDn0YTBnv6U9fxm0T-nm-IGPmRC7RUzxipxWsE2l0Sm-i4HpXDwfgAbaaq2dr80qgeO-Qpq_syGHkxm8E4lS0q8rex')` }}
-                    />
-                    <div className={styles.overlayTextContainer}>
-                        <span className={styles.yearText}>2026</span>
-                    </div>
+                    <WormholeAnimation2026 />
                 </div>
             </div>
 

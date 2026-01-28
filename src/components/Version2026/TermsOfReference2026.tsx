@@ -36,7 +36,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             </h1>
                         </div>
                         <p className={styles.introLead}>
-                            El Centro de Ciencia Francisco José de Caldas y el Centro Cultural del Banco de la República invitan a la comunidad a participar en la convocatoria de ponencias y experiencias en Manizales, Colombia.
+                            El Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República Manizales invitan a la comunidad a participar en la convocatoria de ponencias académicas y experiencias en Manizales, Colombia.
                         </p>
                     </header>
 
@@ -68,9 +68,16 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                                 </div>
                                 <div className={styles.itemCard}>
                                     <h3>Experiencias</h3>
-                                    <p>Proyectos aplicados, demostraciones tecnológicas, intervenciones artísticas o procesos comunitarios vinculados a la IA.</p>
+                                    <p>Proyectos aplicados, demostraciones tecnológicas, intervenciones artísticas, procesos comunitarios, emprendimientos y proyectos creativos o personales vinculados a la IA.</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className={styles.contentBlock}>
+                            <h2 className={styles.sectionTitle}>3.0 Dirigida a:</h2>
+                            <p className={styles.dirigidoText}>
+                                Artistas, investigadores/as, estudiantes, docentes, desarrolladores/as, gestores/as culturales, colectivos, comunidades y ciudadanía en general.
+                            </p>
                         </div>
 
                         <div className={styles.contentBlock} style={{ padding: '2.5rem', border: '1px dashed rgba(26, 26, 26, 0.2)' }}>
@@ -79,8 +86,8 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                                 {[
                                     { l: "Apertura", d: "02 Feb" },
                                     { l: "Cierre", d: "20 Mar" },
-                                    { l: "Resultados", d: "10 Abr" },
-                                    { l: "Evento", d: "19 May" }
+                                    { l: "Resultados", d: "20 Abr" },
+                                    { l: "Evento", d: "27-29 May" }
                                 ].map((date, i) => (
                                     <div key={i} className={styles.cronItem}>
                                         <span className={styles.cronLabel}>{date.l}</span>

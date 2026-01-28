@@ -13,24 +13,18 @@ const Footer2026: React.FC = () => {
                 </div>
 
                 <div className={styles.section}>
+                    <h4 className={styles.label}>Invitan y organizan</h4>
+                    <p className={styles.organizerText}>
+                        Centro Cultural del Banco de la República Manizales y el Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas.
+                    </p>
+                </div>
+
+                <div className={styles.section}>
                     <h4 className={styles.label}>Navegación</h4>
                     <ul className={styles.linkList}>
                         {['Agenda', 'Exponentes', 'Ubicación', 'Registro'].map(item => (
                             <li key={item}>
                                 <a href={`#${item.toLowerCase()}`} className={styles.link}>
-                                    {item}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className={styles.section}>
-                    <h4 className={styles.label}>Legal</h4>
-                    <ul className={styles.linkList}>
-                        {['Términos', 'Privacidad', 'Cookies'].map(item => (
-                            <li key={item}>
-                                <a href="#" className={styles.link}>
                                     {item}
                                 </a>
                             </li>
@@ -51,6 +45,15 @@ const Footer2026: React.FC = () => {
                     <p className={styles.copyright}>
                         © 2026 SEMANA DE LA IA. TODOS LOS DERECHOS RESERVADOS.
                     </p>
+                </div>
+            </div>
+
+            <div className={styles.logosBanner}>
+                <div className={styles.logosContainer}>
+                    <span className={styles.logoPlaceholder}>Banco de la República</span>
+                    <span className={styles.logoPlaceholder}>UCaldas</span>
+                    <span className={styles.logoPlaceholder}>VPU</span>
+                    <span className={styles.logoPlaceholder}>Centro de Ciencia</span>
                 </div>
             </div>
         </footer>

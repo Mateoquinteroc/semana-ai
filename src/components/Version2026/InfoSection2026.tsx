@@ -29,7 +29,7 @@ const InfoSection2026: React.FC = () => {
                     <div>
                         <span className={styles.tag}>03 / Experiencia</span>
                         <p className={styles.description} style={{ marginTop: '2rem' }}>
-                            Cuatro días de inmersión total: talleres de prompt engineering, exposiciones de arte generativo y debates sobre ética algorítmica.
+                            Tres días de inmersión total: talleres de prompt engineering, exposiciones de arte generativo y debates sobre ética algorítmica.
                         </p>
                     </div>
                     <div className={styles.footer}>

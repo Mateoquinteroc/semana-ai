@@ -5,7 +5,7 @@ import styles from './ThematicLines2026.module.css';
 const THEMATIC_AXES = [
     {
         number: "01",
-        title: "I.A y creación artística",
+        title: "IA y creación artística",
         icon: "palette",
         questions: [
             "¿Para qué sirve la IA en el acto creativo?",
@@ -15,7 +15,7 @@ const THEMATIC_AXES = [
     },
     {
         number: "02",
-        title: "I.A trabajo y transformación social",
+        title: "IA, trabajo y transformación social",
         icon: "engineering",
         questions: [
             "¿Reemplazará la IA el empleo en las industrias creativas y científicas?",
@@ -24,7 +24,7 @@ const THEMATIC_AXES = [
     },
     {
         number: "03",
-        title: "Formación de públicos y ética",
+        title: "Ética e inteligencia artificial",
         icon: "balance",
         questions: [
             "¿Cómo formar públicos respecto a las creaciones de I.A.?",
@@ -34,7 +34,7 @@ const THEMATIC_AXES = [
     },
     {
         number: "04",
-        title: "I.A y cultura ambiental",
+        title: "IA y cultura ambiental",
         icon: "eco",
         questions: [
             "¿Qué desafíos plantea la I.A. para el cambio climático?",

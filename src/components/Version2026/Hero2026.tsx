@@ -20,16 +20,25 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                             <span className="material-symbols-outlined" style={{ fontSize: '2.25rem' }}>architecture</span>
                         </div>
                         <p className={styles.subtitle}>
-                            Arte y Ciencia
+                            Semana de la Inteligencia Artificial en el arte y la ciencia
                         </p>
                         <h1 className={styles.title}>
                             SEMANA<br />DE LA IA
                         </h1>
+                        <div className={styles.heroInfo}>
+                            <p className={styles.convocatoria}>
+                                <span>Convocatoria abierta</span>
+                                <span>Ponencias académicas y experiencias</span>
+                            </p>
+                            <p className={styles.eventDate}>
+                                Del 27 al 29 de mayo de 2026 en Manizales
+                            </p>
+                        </div>
                     </div>
                     <div className={styles.bottomContent}>
                         <p className={styles.description}>
                             Conoce nuestros términos de referencia y postúlate a la semana de la IA. <br />
-                            <span className={styles.bold}>2 de febrero apertura de convocatoria.</span>
+                            <span className={styles.bold}>Próximamente apertura de formulario de inscripción.</span>
                         </p>
                         <div className={styles.buttonGroup}>
                             <button

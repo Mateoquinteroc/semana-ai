@@ -13,21 +13,12 @@ import LiveStream2026 from '../components/Version2026/LiveStream2026';
 import Footer2026 from '../components/Version2026/Footer2026';
 import AIGuide2026 from '../components/Version2026/AIGuide2026';
 import TermsOfReference2026 from '../components/Version2026/TermsOfReference2026';
+import IntroSection2026 from '../components/Version2026/IntroSection2026';
+
 
 import styles from './Version2026.module.css';
 
-// CONFIGURACIÓN: Cambia a 'true' para mostrar o 'false' para ocultar
-const VISIBLE_COMPONENTS = {
-    hero: true,
-    thematicLines: true,
-    schedule: false,
-    speakers: false,
-    location: false,
-    registration: false,
-    liveStream: false,
-    footer: false,
-    aiGuide: false
-};
+import { VISIBLE_COMPONENTS } from '../components/Version2026/config';
 
 interface Version2026Props {
     initialView?: 'home' | 'terms';
@@ -55,6 +46,7 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
         <div className={styles.page}>
             <main className={styles.main}>
                 {VISIBLE_COMPONENTS.hero && <Hero2026 onShowTerms={handleShowTerms} />}
+                {VISIBLE_COMPONENTS.intro && <IntroSection2026 />}
                 {VISIBLE_COMPONENTS.thematicLines && <ThematicLines2026 />}
                 {VISIBLE_COMPONENTS.schedule && <Schedule2026 />}
                 {VISIBLE_COMPONENTS.speakers && <Speakers2026 />}

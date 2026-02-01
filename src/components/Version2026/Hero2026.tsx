@@ -71,7 +71,7 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
             <CustomAlert2026
                 isOpen={showAlert}
                 onClose={() => setShowAlert(false)}
-                message="Este formulario estará disponible el 2 de febrero."
+                message="Este formulario estará disponible el 3 de marzo."
             />
         </section>
     );

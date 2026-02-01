@@ -292,3 +292,247 @@
 .submitBtn:hover {
     background-color: #333333;
 }
+
+/* Estilos para los ejes temáticos dentro de los términos */
+.axesWrapper {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+    background-color: transparent;
+    border-left: 2px solid #1a1a1a;
+}
+
+.axesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .axesGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.axisItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.axisHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.axisLabel {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: rgba(26, 26, 26, 0.4);
+    min-width: 60px;
+}
+
+.axisDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    color: #1a1a1a;
+}
+
+.requisitosList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.requisitoItem {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #333;
+    padding-left: 1rem;
+    border-left: 2px solid #e5e5e5;
+}
+
+.formList {
+    list-style: none;
+    padding: 1rem 0 0 2rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formList li {
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.formList li::before {
+    content: "→";
+    position: absolute;
+    left: -1.5rem;
+    opacity: 0.4;
+}
+
+.riderBox {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f7f7f7;
+    border: 1px solid rgba(26, 26, 26, 0.05);
+}
+
+.criteriosList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.criteriosList li {
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.criteriosList li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    flex-shrink: 0;
+}
+
+.notesBox {
+    padding: 1.5rem;
+    border-left: 4px solid #1a1a1a;
+    background-color: #f9f9f9;
+}
+
+.notesBox p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+}
+
+/* Estilos para el acordeón */
+.accordionList {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.accordionItem {
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.accordionHeader {
+    width: 100%;
+    padding: 1.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    color: inherit;
+}
+
+.accordionTitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.accordionIcon {
+    font-size: 1.25rem;
+    opacity: 0.5;
+    transition: transform 0.3s ease;
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.accordionContent.active {
+    max-height: 200px;
+    opacity: 1;
+    padding-bottom: 1.5rem;
+}
+
+.accordionContent p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 !important;
+    color: #444;
+    opacity: 0.8;
+}
+
+/* Ajustes para hover en el contenedor padre itemCard */
+.itemCard:hover .accordionItem {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.itemCard:hover .accordionTitle,
+.itemCard:hover .accordionIcon {
+    color: #fff;
+}
+
+.itemCard:hover .accordionContent p {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.axisTitle {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.questionsList {
+    list-style: none;
+    padding: 1rem 0 1.5rem 4.75rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.questionItem {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #444;
+}
+
+/* Ajustes para hover en el contenedor padre */
+.itemCard:hover .accordionTitle,
+.itemCard:hover .accordionIcon,
+.itemCard:hover .accordionContent p {
+    color: #ffffff;
+}
+
+.itemCard:hover .accordionItem {
+    border-color: rgba(255, 255, 255, 0.2);
+}

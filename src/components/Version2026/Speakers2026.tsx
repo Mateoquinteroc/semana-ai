@@ -11,7 +11,7 @@ const Speakers2026: React.FC = () => {
             </div>
 
             <div className={styles.grid}>
-                {SPEAKERS.map((speaker) => (
+                {SPEAKERS.map((speaker: any) => (
                     <div key={speaker.id} className={styles.card}>
                         <div className={styles.imageContainer}>
                             <img

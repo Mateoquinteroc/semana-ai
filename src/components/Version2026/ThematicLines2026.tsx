@@ -1,47 +1,7 @@
-
 import React from 'react';
 import styles from './ThematicLines2026.module.css';
 
-const THEMATIC_AXES = [
-    {
-        number: "01",
-        title: "IA y creación artística",
-        icon: "palette",
-        questions: [
-            "¿Para qué sirve la IA en el acto creativo?",
-            "¿Puede la máquina tener sensibilidad estética?",
-            "¿Qué significa 'crear' en un contexto donde la IA genera imágenes, música o textos?"
-        ]
-    },
-    {
-        number: "02",
-        title: "IA, trabajo y transformación social",
-        icon: "engineering",
-        questions: [
-            "¿Reemplazará la IA el empleo en las industrias creativas y científicas?",
-            "¿Qué nuevos roles emergen con la IA como herramienta?"
-        ]
-    },
-    {
-        number: "03",
-        title: "Ética e inteligencia artificial",
-        icon: "balance",
-        questions: [
-            "¿Cómo formar públicos respecto a las creaciones de I.A.?",
-            "¿Cómo distinguir entre lo humano y lo artificial en la producción cultural?",
-            "¿Qué desafíos éticos plantea la IA en la creación y difusión de contenidos?"
-        ]
-    },
-    {
-        number: "04",
-        title: "IA y cultura ambiental",
-        icon: "eco",
-        questions: [
-            "¿Qué desafíos plantea la I.A. para el cambio climático?",
-            "¿Qué acciones de mitigación de este impacto se pueden desarrollar?"
-        ]
-    }
-];
+import { THEMATIC_AXES } from './constants';
 
 const ThematicLines2026: React.FC = () => {
     return (

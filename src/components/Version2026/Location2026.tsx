@@ -1,37 +1,58 @@
 import React from 'react';
 import styles from './Location2026.module.css';
 
+const LOCATIONS = [
+    {
+        name: "Centro Cultural Universitario Rogelio Salmona",
+        address: "Carrera 28D entre, Cl. 66 #y 67, Manizales, Caldas",
+        gmapsUrl: "https://maps.app.goo.gl/xLDidnBNCt297eEUA",
+        img: "https://lh3.googleusercontent.com/p/AF1QipNzGA87WG8m2gMMDnFiquapup-reT9NVzVd6cB2=s1360-w1360-h1020-rw",
+        tag: "SEDE PRINCIPAL"
+    },
+    {
+        name: "Biblioteca Banco de la República",
+        address: "Cra. 23 #23-06, Manizales, Caldas",
+        gmapsUrl: "https://maps.app.goo.gl/6HXKjbkeTLE6iteGA",
+        img: "https://d3nmwx7scpuzgc.cloudfront.net/sites/default/files/media/image/manizales.jpg",
+        tag: "SEDE ALTERNA"
+    },
+];
+
 const Location2026: React.FC = () => {
     return (
         <section className={styles.section} id="ubicacion">
-            <div className={styles.content}>
+            <div className={styles.container}>
                 <div className={styles.header}>
-                    <span className={styles.tag}>Ubicación</span>
-                    <h2 className={styles.title}>Manizales,<br />Colombia</h2>
+                    <span className={styles.tag}>PUNTOS DE ENCUENTRO</span>
+                    <h2 className={styles.title}>Ubicaciones<br />2026</h2>
                 </div>
 
-                <div className={styles.details}>
-                    <div className={styles.detailItem}>
-                        <h4 className={styles.detailLabel}>Sede Principal</h4>
-                        <p className={styles.detailValue}>Multimedia Art Museum (MAM)</p>
-                        <p className={styles.detailSubValue}>Carrera 23 # 51-24, Manizales</p>
-                    </div>
-
-                    <div className={`${styles.detailItem} styles.divider`}>
-                        <h4 className={styles.detailLabel}>Contacto</h4>
-                        <p className={styles.detailSubValue}>info@semana-ia.co</p>
-                    </div>
+                <div className={styles.grid}>
+                    {LOCATIONS.map((loc, index) => (
+                        <div key={index} className={styles.card}>
+                            <div className={styles.imageWrapper}>
+                                <img src={loc.img} alt={loc.name} className={styles.image} />
+                                <div className={styles.cardTag}>{loc.tag}</div>
+                                <div className="grainy-overlay" style={{ opacity: 0.3 }} />
+                            </div>
+                            <div className={styles.cardContent}>
+                                <div className={styles.textContent}>
+                                    <h3 className={styles.locationName}>{loc.name}</h3>
+                                    <p className={styles.locationAddress}>{loc.address}</p>
+                                </div>
+                                <a
+                                    href={loc.gmapsUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.gmapsBtn}
+                                >
+                                    <span>VER EN MAPA</span>
+                                    <span className="material-symbols-outlined">north_east</span>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
-
-            <div className={styles.mapSection}>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.561331782294!2d-75.50346!3d5.06744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDQnMDIuOCJOIDc1wrAzMCcxMi40Ilc!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco"
-                    className={styles.iframe}
-                    allowFullScreen
-                    loading="lazy"
-                />
-                <div className={styles.mapOverlay} />
             </div>
         </section>
     );

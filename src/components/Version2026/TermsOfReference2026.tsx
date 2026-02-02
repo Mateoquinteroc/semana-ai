@@ -43,7 +43,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             </h1>
                         </div>
                         <p className={styles.introLead}>
-                            El Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales invitan a artistas, investigadores/as, estudiantes, docentes, desarrolladores/as, gestores/as culturales, colectivos, comunidades, ciudadanos y demás actores interesados en las relaciones entre la inteligencia artificial (IA), el arte, la ciencia y los procesos educativos, culturales y sociales derivados de esta interacción, a participar en la convocatoria de ponencias y experiencias para la Semana de la Inteligencia Artificial en las Artes y la Ciencia, que se llevará a cabo del 27 al 29 de mayo de 2026 en la ciudad de Manizales, Colombia.
+                            El Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales invitan a artistas, investigadores/as, estudiantes, docentes, desarrolladores/as, gestores/as culturales, colectivos, comunidades, ciudadanos y demás actores interesados en las relaciones entre la inteligencia artificial (IA), el arte, la ciencia y los procesos educativos, culturales y sociales derivados de esta interacción, a participar en la convocatoria de ponencias y experiencias para la Semana de la Inteligencia Artificial en las Artes y la Ciencia, que se llevará a cabo del 25 al 28 de mayo de 2026 en la ciudad de Manizales, Colombia.
                             <br /><br />
                             En su tercera versión, la Semana de la Inteligencia Artificial busca consolidarse como un espacio de reflexión y diálogo sobre los impactos y posibilidades de la IA en la vida contemporánea. Para ello, contaremos con expertos nacionales que activarán conversaciones, talleres y espacios de diálogo para comprender cómo la IA se integra en la vida cotidiana y en los procesos creativos.
                         </p>
@@ -181,7 +181,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             <h2 style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.3em', margin: 0 }}>Cronograma</h2>
                             <div className={styles.cronGrid}>
                                 {[
-                                    { l: "Apertura", d: "03 Mar" },
+                                    { l: "Apertura", d: "03 Feb" },
                                     { l: "Cierre", d: "20 Mar" },
                                     { l: "Resultados", d: "20 Abr" },
                                     { l: "Evento", d: "25-28 May" }
@@ -216,7 +216,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
             <CustomAlert2026
                 isOpen={showAlert}
                 onClose={() => setShowAlert(false)}
-                message="Este formulario estará disponible el 3 de marzo."
+                message="Este formulario estará disponible el 3 de febrero."
             />
         </div>
     );

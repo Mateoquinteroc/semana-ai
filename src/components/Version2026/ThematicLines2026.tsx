@@ -6,6 +6,9 @@ import { THEMATIC_AXES } from './constants';
 const ThematicLines2026: React.FC = () => {
     return (
         <section className={styles.section}>
+            <div className={styles.sectionHeader}>
+                <span className={styles.sectionTag}>Ejes temáticos</span>
+            </div>
             <div className={styles.grid}>
                 {THEMATIC_AXES.map((axis, index) => (
                     <div key={index} className={styles.axisCard}>

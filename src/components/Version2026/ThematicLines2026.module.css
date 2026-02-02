@@ -1,11 +1,40 @@
 .section {
     border-bottom: 1px solid #1a1a1a;
     overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sectionHeader {
+    padding: 3rem 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0c0c0c;
+    color: #ffffff;
+}
+
+.sectionTag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sectionTag::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #ffffff;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 1fr;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -29,9 +58,23 @@
     justify-content: space-between;
     border-bottom: 1px solid #1a1a1a;
     cursor: default;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     overflow: hidden;
     z-index: 1;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .sectionHeader {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .axisCard {
+        padding: 2.5rem 1.5rem;
+        min-height: auto;
+        border-right: none !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -62,9 +105,11 @@
 
 .axisCard:hover {
     background-color: #1a1a1a;
+    z-index: 2;
 }
 
 .axisCard:hover .text {
+    transform: translateX(15px);
     color: #ffffff;
 }
 
@@ -89,6 +134,11 @@
     z-index: 10;
 }
 
+.text {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 10;
+}
+
 .label {
     font-size: 0.75rem;
     font-weight: 900;
@@ -110,7 +160,6 @@
     letter-spacing: -0.05em;
     line-height: 1.1;
     transition: all 0.5s ease-in-out;
-    z-index: 10;
 }
 
 .questionsWrapper {
@@ -171,7 +220,7 @@
 .bgAccent {
     position: absolute;
     inset: 0;
-    background-color: #1a1a1a;
+    background-color: #141414;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: -1;

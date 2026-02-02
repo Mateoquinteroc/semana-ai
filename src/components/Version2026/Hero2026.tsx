@@ -23,7 +23,7 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                             Semana de la Inteligencia Artificial en las Artes y la Ciencias
                         </p>
                         <p className={styles.eventDate}>
-                            Del 27 al 29 de mayo de 2026 en Manizales
+                            Del 25 al 28 de mayo de 2026 en Manizales
                         </p>
                         <h1 className={styles.title}>
                             SEMANA<br />DE LA IA
@@ -70,7 +70,7 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
             <CustomAlert2026
                 isOpen={showAlert}
                 onClose={() => setShowAlert(false)}
-                message="Este formulario estará disponible el 3 de marzo."
+                message="Este formulario estará disponible el 3 de febrero."
             />
         </section>
     );

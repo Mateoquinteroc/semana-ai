@@ -1,7 +1,7 @@
 
 export const FORM_CONFIG = {
-    // Fecha de apertura: 3 de marzo de 2026
-    releaseDate: new Date('2026-03-03T00:00:00'),
+    // Fecha de apertura: 3 de febrero de 2026
+    releaseDate: new Date('2026-02-03T00:00:00'),
     // Link del formulario (reemplazar por el link real cuando esté disponible)
     formLink: 'https://forms.gle/QidyC3dyxECYV5jr6'
 };

@@ -86,7 +86,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                                 <div className={styles.accordionContent} style={{ maxHeight: 'none', opacity: 1, padding: '0.5rem 0', border: 'none' }}>
                                     <p>Proyectos aplicados, demostraciones tecnológicas, intervenciones artísticas, procesos comunitarios, emprendimientos y proyectos creativos o personales vinculados a la IA.</p>
                                     <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
-                                        * Las experiencias deberán desarrollarse únicamente en modalidad presencial y no estarán sujetas a los ejes temáticos definidos por el evento; su enfoque será de libre elección. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
+                                        * Las experiencias deberán desarrollarse únicamente en modalidad presencial y no estarán sujetas a los ejes temáticos definidos por el evento. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
                                     </p>
                                 </div>
                             </div>
@@ -130,18 +130,10 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                                 <div className={styles.requisitoItem}>Las propuestas pueden provenir de cualquier lugar del mundo, pero deben presentarse en español.</div>
                                 <div className={styles.requisitoItem}>Duración de la presentación de la ponencia: 20 minutos + 5 minutos para preguntas.</div>
 
-                                <div className={styles.requisitoItem} style={{ marginTop: '1rem', fontWeight: 'bold' }}>
-                                    Llenar el formulario de postulación de la convocatoria con la siguiente información:
+                                <div className={styles.requisitoItem}>
+                                    Llenar el formulario de postulación de la convocatoria.
                                 </div>
-                                <ul className={styles.formList}>
-                                    <li>Título de la ponencia o experiencia.</li>
-                                    <li>Autor(es) y afiliación institucional (si aplica).</li>
-                                    <li>Resumen (máx. 300 palabras).</li>
-                                    <li>Modalidad (ponencia o experiencia).</li>
-                                    <li>Eje temático (para el caso de la ponencia).</li>
-                                    <li>Breve biografía (máx. 150 palabras).</li>
-                                    <li>Opcional: enlace a video o audio.</li>
-                                </ul>
+
 
                                 <div className={styles.riderBox}>
                                     <p>
@@ -154,9 +146,24 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                         <div className={styles.contentBlock}>
                             <h2 className={styles.sectionTitle}>5.0 Criterios de selección</h2>
                             <ul className={styles.criteriosList}>
-                                <li>Cumplimiento de los requisitos de la convocatoria.</li>
-                                <li>Pertinencia con los ejes temáticos y/o objetivos del evento.</li>
-                                <li>Aportes significativos al desarrollo del encuentro.</li>
+                                <li>
+                                    <div className={styles.criterioText}>
+                                        <strong>Cumplimiento de los requisitos de la convocatoria</strong>
+                                        <p>La propuesta debe cumplir completamente con los requisitos de postulación, en términos de los tiempos, documentos y especificaciones solicitadas.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.criterioText}>
+                                        <strong>Pertinencia con los ejes temáticos</strong>
+                                        <p>Se evaluará qué tan directamente la propuesta aporta y se relaciona con el eje temático seleccionados.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.criterioText}>
+                                        <strong>Aportes significativos al desarrollo del encuentro</strong>
+                                        <p>Se valorará la capacidad de la propuesta para generar reflexión, diálogo o nuevas perspectivas dentro del evento. Se priorizarán experiencias y ponencias innovadoras que enriquezcan las discusiones y aporten trabajos alineados con los objetivos centrales del evento.</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
 

@@ -396,8 +396,8 @@
     font-size: 1.125rem;
     font-weight: 500;
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .criteriosList li::before {
@@ -406,6 +406,21 @@
     height: 8px;
     background-color: #000;
     flex-shrink: 0;
+    margin-top: 0.6rem;
+}
+
+.criterioText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.criterioText p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.8;
 }
 
 .notesBox {

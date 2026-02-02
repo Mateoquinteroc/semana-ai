@@ -26,14 +26,14 @@ function AppWrapper() {
           location.pathname !== '/' &&
           !location.pathname.startsWith('/2026') && <ScrollArrow />}
 
-        {location.pathname !== '/2026/terminos' && <TabNavigation />}
+        {location.pathname !== '/2026/condiciones' && <TabNavigation />}
 
         <Routes>
           <Route path="/" element={<Version2026 />} />
           <Route path="/2024" element={<Version2024 />} />
           <Route path="/2025" element={<Version2025 />} />
           <Route path="/2026" element={<Version2026 />} />
-          <Route path="/2026/terminos" element={<Version2026 initialView="terms" />} />
+          <Route path="/2026/condiciones" element={<Version2026 initialView="terms" />} />
           <Route path="/documento" element={<PDFViewerSection />} />
         </Routes>
       </div>

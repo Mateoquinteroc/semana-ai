@@ -30,7 +30,7 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
 
     const handleShowTerms = () => {
         setView('terms');
-        navigate('/2026/terminos');
+        navigate('/2026/condiciones');
     };
 
     const handleBack = () => {

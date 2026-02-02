@@ -24,7 +24,7 @@ const Footer2026: React.FC = () => {
                 <div className={styles.section}>
                     <h4 className={styles.label}>Invitan y organizan</h4>
                     <p className={styles.organizerText}>
-                        Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República Manizales.
+                        Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República de Manizales.
                     </p>
                 </div>
 

@@ -37,7 +37,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                 <div className={styles.container}>
                     <header className={styles.intro}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                            <span className={styles.introTag}>Convocatoria Oficial 2026</span>
+                            <span className={styles.introTag}>Condiciones de postulación 2026</span>
                             <h1 className={styles.introTitle}>
                                 Tercera Semana de la Inteligencia Artificial
                             </h1>
@@ -69,12 +69,26 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                         </div>
 
                         <div className={styles.contentBlock}>
-                            <h2 className={styles.sectionTitle}>2.0 Ponencias</h2>
-                            <div className={styles.accordionContent} style={{ maxHeight: 'none', opacity: 1, padding: '1.5rem 0', border: 'none' }}>
-                                <p>Presentaciones teóricas o resultados de investigación sobre IA en relación con los ejes temáticos del evento.</p>
-                                <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
-                                    * Las presentaciones podrán ser presenciales o virtuales, aunque se privilegiarán las propuestas presenciales. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
-                                </p>
+                            <h2 className={styles.sectionTitle}>Modalidades de participación</h2>
+
+                            <div className={styles.subSection} style={{ marginTop: '1rem' }}>
+                                <h3 className={styles.axisTitle} style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>2.1 Ponencias</h3>
+                                <div className={styles.accordionContent} style={{ maxHeight: 'none', opacity: 1, padding: '0.5rem 0', border: 'none' }}>
+                                    <p>Presentaciones teóricas o resultados de investigación sobre IA en relación con los ejes temáticos del evento.</p>
+                                    <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
+                                        * Las presentaciones podrán ser presenciales o virtuales, aunque se privilegiarán las propuestas presenciales. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className={styles.subSection} style={{ marginTop: '2rem' }}>
+                                <h3 className={styles.axisTitle} style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>2.2 Experiencias</h3>
+                                <div className={styles.accordionContent} style={{ maxHeight: 'none', opacity: 1, padding: '0.5rem 0', border: 'none' }}>
+                                    <p>Proyectos aplicados, demostraciones tecnológicas, intervenciones artísticas, procesos comunitarios, emprendimientos y proyectos creativos o personales vinculados a la IA.</p>
+                                    <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
+                                        * Las experiencias deberán desarrollarse únicamente en modalidad presencial y no estarán sujetas a los ejes temáticos definidos por el evento; su enfoque será de libre elección. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -110,17 +124,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                         </div>
 
                         <div className={styles.contentBlock}>
-                            <h2 className={styles.sectionTitle}>4.0 Experiencias</h2>
-                            <div className={styles.accordionContent} style={{ maxHeight: 'none', opacity: 1, padding: '1.5rem 0', border: 'none' }}>
-                                <p>Proyectos aplicados, demostraciones tecnológicas, intervenciones artísticas, procesos comunitarios, emprendimientos y proyectos creativos o personales vinculados a la IA.</p>
-                                <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
-                                    * Las experiencias deberán desarrollarse únicamente en modalidad presencial y no estarán sujetas a los ejes temáticos definidos por el evento; su enfoque será de libre elección. Quienes sean aceptados recibirán una constancia de participación expedida por la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={styles.contentBlock}>
-                            <h2 className={styles.sectionTitle}>5.0 Requisitos para la postulación</h2>
+                            <h2 className={styles.sectionTitle}>4.0 Requisitos para la postulación</h2>
                             <div className={styles.requisitosList}>
                                 <div className={styles.requisitoItem}>Ser mayor de edad.</div>
                                 <div className={styles.requisitoItem}>Las propuestas pueden provenir de cualquier lugar del mundo, pero deben presentarse en español.</div>
@@ -148,7 +152,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                         </div>
 
                         <div className={styles.contentBlock}>
-                            <h2 className={styles.sectionTitle}>6.0 Criterios de selección</h2>
+                            <h2 className={styles.sectionTitle}>5.0 Criterios de selección</h2>
                             <ul className={styles.criteriosList}>
                                 <li>Cumplimiento de los requisitos de la convocatoria.</li>
                                 <li>Pertinencia con los ejes temáticos y/o objetivos del evento.</li>
@@ -157,7 +161,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                         </div>
 
                         <div className={styles.contentBlock}>
-                            <h2 className={styles.sectionTitle}>7.0 Notas Importantes</h2>
+                            <h2 className={styles.sectionTitle}>6.0 Notas Importantes</h2>
                             <div className={styles.notesBox}>
                                 <p><strong>Nota 1:</strong> La participación a través de las ponencias o experiencias no genera ningún vínculo contractual con el Banco de la República ni con el Centro de Ciencia Francisco José de Caldas. Se expedirá una constancia de participación firmada por el Banco de la República y la Universidad de Caldas.</p>
                                 <p style={{ marginTop: '1.5rem' }}><strong>Nota 2:</strong> Las iniciativas artísticas presentadas en el encuentro no serán exhibidas ni entrarán a formar parte de las colecciones de arte del Banco de la República ni del Centro de Ciencia Francisco José de Caldas.</p>

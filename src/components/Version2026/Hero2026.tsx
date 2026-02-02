@@ -20,7 +20,10 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                             <span className="material-symbols-outlined" style={{ fontSize: '2.25rem' }}>architecture</span>
                         </div>
                         <p className={styles.subtitle}>
-                            Semana de la Inteligencia Artificial en el arte y la ciencia
+                            Semana de la Inteligencia Artificial en las Artes y la Ciencias
+                        </p>
+                        <p className={styles.eventDate}>
+                            Del 27 al 29 de mayo de 2026 en Manizales
                         </p>
                         <h1 className={styles.title}>
                             SEMANA<br />DE LA IA
@@ -30,22 +33,18 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                                 <span>Convocatoria abierta</span>
                                 <span>Ponencias académicas y experiencias</span>
                             </p>
-                            <p className={styles.eventDate}>
-                                Del 27 al 29 de mayo de 2026 en Manizales
-                            </p>
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
                         <p className={styles.description}>
-                            Conoce nuestros términos de referencia y postúlate a la semana de la IA. <br />
-                            <span className={styles.bold}>Próximamente apertura de formulario de inscripción.</span>
+                            Conoce nuestras condiciones de postulación y participa de la Semana de la Inteligencia Artificial en las Artes y la Ciencia <br />
                         </p>
                         <div className={styles.buttonGroup}>
                             <button
                                 onClick={onShowTerms}
                                 className={`${styles.btn} ${styles.btnSecondary}`}
                             >
-                                Términos de Referencia
+                                Condiciones de postulación
                             </button>
                             <button
                                 onClick={() => {

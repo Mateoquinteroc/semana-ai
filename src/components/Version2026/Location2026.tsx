@@ -10,11 +10,11 @@ const LOCATIONS = [
         tag: "SEDE PRINCIPAL"
     },
     {
-        name: "Biblioteca Banco de la República",
+        name: "Centro Cultural del Banco de la República de Manizales",
         address: "Cra. 23 #23-06, Manizales, Caldas",
         gmapsUrl: "https://maps.app.goo.gl/6HXKjbkeTLE6iteGA",
         img: "https://d3nmwx7scpuzgc.cloudfront.net/sites/default/files/media/image/manizales.jpg",
-        tag: "SEDE ALTERNA"
+        tag: "SEDE PRINCIPAL"
     },
 ];
 

@@ -99,9 +99,8 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    border-top: 1px solid #1a1a1a;
-    padding-top: 0.5rem;
     display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
 .bottomContent {

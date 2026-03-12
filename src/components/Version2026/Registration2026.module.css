@@ -121,3 +121,18 @@
 .submitBtn:hover .icon {
     transform: translateX(0.5rem);
 }
+
+.descriptionText {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    opacity: 0.8;
+}
+
+.successMessage {
+    text-align: center;
+    color: #2e7d32;
+    font-weight: 500;
+    margin-top: 1rem;
+}

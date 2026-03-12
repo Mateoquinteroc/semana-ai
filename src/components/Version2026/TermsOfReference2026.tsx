@@ -172,7 +172,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             <div className={styles.notesBox}>
                                 <p><strong>Nota 1:</strong> La participación a través de las ponencias o experiencias no genera ningún vínculo contractual con el Banco de la República ni con el Centro de Ciencia Francisco José de Caldas. Se expedirá una constancia de participación firmada por el Banco de la República y la Universidad de Caldas.</p>
                                 <p style={{ marginTop: '1.5rem' }}><strong>Nota 2:</strong> Las iniciativas artísticas presentadas en el encuentro no serán exhibidas ni entrarán a formar parte de las colecciones de arte del Banco de la República ni del Centro de Ciencia Francisco José de Caldas.</p>
-                                <p style={{ marginTop: '1.5rem' }}><strong>Nota 3:</strong> Quienes sean seleccionados para participar en el encuentro deben tener disponibilidad para la presentación de su ponencia o experiencia entre el 25 y 28 de mayo del presente año, según la programación de la semana.</p>
+                                <p style={{ marginTop: '1.5rem' }}><strong>Nota 3:</strong> Quienes sean seleccionados para participar en el encuentro deben tener disponibilidad para la presentación de su ponencia o experiencia entre el 25 al 28 de mayo del presente año, según la programación de la semana.</p>
                                 <p style={{ marginTop: '1.5rem' }}><strong>Nota 4:</strong> La aceptación como ponente no incluye gastos de ningún tipo por parte del evento y de la organización.</p>
                             </div>
                         </div>

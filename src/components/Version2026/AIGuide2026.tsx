@@ -27,7 +27,7 @@ const AIGuide2026: React.FC = () => {
 
         // Simulated response
         setTimeout(() => {
-            setMessages(prev => [...prev, { role: 'model', text: "Lo siento, soy un prototipo y mi conexión con Gemini está desactivada en este entorno local. Sin embargo, puedo confirmarte que el evento será del 19 al 22 de mayo de 2026." }]);
+            setMessages(prev => [...prev, { role: 'model', text: "Lo siento, soy un prototipo y mi conexión con Gemini está desactivada en este entorno local. Sin embargo, puedo confirmarte que el evento será del 25 al 28 de mayo de 2026." }]);
             setIsTyping(false);
         }, 1000);
     };

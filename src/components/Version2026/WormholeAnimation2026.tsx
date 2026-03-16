@@ -1,6 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './WormholeAnimation2026.module.css';
 
+const ASCII_2026 = ` $$$$$$\\   $$$$$$\\   $$$$$$\\   $$$$$$\\  
+$$  __$$\\ $$$ __$$\\ $$  __$$\\ $$  __$$\\ 
+\\__/  $$ |$$$$\\ $$ |\\__/  $$ |$$ /  \\__|
+ $$$$$$  |$$\\$$\\$$ | $$$$$$  |$$$$$$$\\  
+$$  ____/ $$ \\$$$$ |$$  ____/ $$  __$$\\ 
+$$ |      $$ |\\$$$ |$$ |      $$ /  $$ |
+$$$$$$$$\\ \\$$$$$$  /$$$$$$$$\\  $$$$$$  |
+\\________| \\______/ \\________| \\______/ `;
+
 const WormholeAnimation2026: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const bootLogRef = useRef<HTMLDivElement>(null);
@@ -52,8 +61,7 @@ const WormholeAnimation2026: React.FC = () => {
         }
 
         let time = 0;
-        let titleAlpha = 0.1;
-        let titleAlphaDir = 1;
+
 
         const fieldOfView = 250;
         const viewerDistance = 300;
@@ -168,12 +176,6 @@ const WormholeAnimation2026: React.FC = () => {
             cy = Math.cos(ry); sy = Math.sin(ry);
             cz = Math.cos(rz); sz = Math.sin(rz);
 
-            titleAlpha += 0.0005 * titleAlphaDir;
-            if (titleAlpha >= 0.8 || titleAlpha <= 0.05) titleAlphaDir *= -1;
-            if (time % 2 === 0 && mainTitleRef.current) {
-                mainTitleRef.current.style.color = `rgba(255, 255, 255, ${titleAlpha})`;
-            }
-
             for (let i = 0; i < chainCount; i++) chains[i].update();
 
             // Sort only every 2nd frame to save CPU
@@ -213,7 +215,7 @@ const WormholeAnimation2026: React.FC = () => {
 
             <div className={styles.uiLayer}>
                 <div className={styles.header}>WORMHOLE_CORE // OPTIMIZED_V27_RESTORED</div>
-                <div className={styles.mainTitle} ref={mainTitleRef}>2026</div>
+                <div className={styles.mainTitle} ref={mainTitleRef}>{ASCII_2026}</div>
 
                 <div className={styles.bootLog} ref={bootLogRef}>
                     &gt; OPTIMIZATION: MAX<br />

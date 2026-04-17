@@ -6,7 +6,7 @@ const LOCATIONS = [
         name: "Centro Cultural Universitario Rogelio Salmona",
         address: "Carrera 28D entre, Cl. 66 #y 67, Manizales, Caldas",
         gmapsUrl: "https://maps.app.goo.gl/xLDidnBNCt297eEUA",
-        img: "https://lh3.googleusercontent.com/p/AF1QipNzGA87WG8m2gMMDnFiquapup-reT9NVzVd6cB2=s1360-w1360-h1020-rw",
+        img: "https://lh3.googleusercontent.com/p/AF1QipNzGA87WG8m2gMMDnFiquapup-reT9NVzVd6cB2=s680-w680-h510-rw",
         tag: "SEDE PRINCIPAL"
     },
     {

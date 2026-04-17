@@ -30,33 +30,23 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                         </h1>
                         <div className={styles.heroInfo}>
                             <p className={styles.convocatoria}>
-                                <span>Convocatoria abierta</span>
-                                <span>Ponencias académicas y experiencias</span>
+                                <span>Prepárate para la Tercera Edición</span>
+                                <span>Un punto de encuentro entre arte, ciencia y tecnología</span>
                             </p>
                         </div>
                     </div>
                     <div className={styles.bottomContent}>
                         <p className={styles.description}>
-                            Conoce nuestras condiciones de postulación y participa de la Semana de la Inteligencia Artificial en las Artes y la Ciencia <br />
+                            Regístrate ahora para participar en la Semana de la Inteligencia Artificial y recibir toda la información sobre la agenda y nuestros invitados <br />
                         </p>
                         <div className={styles.buttonGroup}>
                             <button
-                                onClick={onShowTerms}
-                                className={`${styles.btn} ${styles.btnSecondary}`}
-                            >
-                                Condiciones de postulación
-                            </button>
-                            <button
                                 onClick={() => {
-                                    if (isFormAvailable()) {
-                                        window.open(FORM_CONFIG.formLink, '_blank');
-                                    } else {
-                                        setShowAlert(true);
-                                    }
+                                    document.getElementById('registro')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className={`${styles.btn} ${styles.btnPrimary}`}
+                                className={`${styles.btn} ${styles.btnParticipa}`}
                             >
-                                Postúlate
+                                PARTICIPA
                             </button>
                         </div>
                     </div>

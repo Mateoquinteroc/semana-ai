@@ -1,15 +1,10 @@
 import React from 'react';
 import styles from './Hero2026.module.css';
-import CustomAlert2026 from './CustomAlert2026';
-import { isFormAvailable, FORM_CONFIG } from './config';
+
+
 import WormholeAnimation2026 from './WormholeAnimation2026';
 
-interface HeroProps {
-    onShowTerms: () => void;
-}
-
-const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
-    const [showAlert, setShowAlert] = React.useState(false);
+const Hero2026: React.FC = () => {
 
     return (
         <section className={styles.hero}>
@@ -57,11 +52,6 @@ const Hero2026: React.FC<HeroProps> = ({ onShowTerms }) => {
                 </div>
             </div>
 
-            <CustomAlert2026
-                isOpen={showAlert}
-                onClose={() => setShowAlert(false)}
-                message="Este formulario estará disponible el 3 de febrero."
-            />
         </section>
     );
 };

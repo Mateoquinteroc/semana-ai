@@ -28,10 +28,7 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
     const navigate = useNavigate();
     const [view, setView] = useState<'home' | 'terms'>(initialView);
 
-    const handleShowTerms = () => {
-        setView('terms');
-        navigate('/2026/condiciones');
-    };
+
 
     const handleBack = () => {
         setView('home');
@@ -45,7 +42,7 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                {VISIBLE_COMPONENTS.hero && <Hero2026 onShowTerms={handleShowTerms} />}
+                {VISIBLE_COMPONENTS.hero && <Hero2026 />}
                 {VISIBLE_COMPONENTS.intro && <IntroSection2026 />}
                 {VISIBLE_COMPONENTS.thematicLines && <ThematicLines2026 />}
                 {VISIBLE_COMPONENTS.schedule && <Schedule2026 />}

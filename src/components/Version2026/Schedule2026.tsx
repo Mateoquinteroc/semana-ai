@@ -90,7 +90,7 @@ const Schedule2026: React.FC = () => {
             <div className={styles.container}>
                 <div className={styles.sidebar}>
                     <h2 className={styles.sidebarTitle}>Agenda<br />2026</h2>
-                    <p className={styles.sidebarSub}>Mayo 19 — 22</p>
+                    <p className={styles.sidebarSub}>Mayo 26 — 29</p>
                 </div>
 
                 <div className={styles.list}>

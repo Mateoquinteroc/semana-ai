@@ -18,7 +18,7 @@ const Hero2026: React.FC = () => {
                             Semana de la Inteligencia Artificial en las Artes y la Ciencias
                         </p>
                         <p className={styles.eventDate}>
-                            Del 25 al 28 de mayo de 2026 en Manizales
+                            Del 26 al 29 de mayo de 2026 en Manizales
                         </p>
                         <h1 className={styles.title}>
                             SEMANA<br />DE LA IA

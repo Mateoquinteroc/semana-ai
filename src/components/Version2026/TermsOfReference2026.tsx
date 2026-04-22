@@ -43,7 +43,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             </h1>
                         </div>
                         <p className={styles.introLead}>
-                            El Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales invitan a artistas, investigadores/as, estudiantes, docentes, desarrolladores/as, gestores/as culturales, colectivos, comunidades, ciudadanos y demás actores interesados en las relaciones entre la inteligencia artificial (IA), el arte, la ciencia y los procesos educativos, culturales y sociales derivados de esta interacción, a participar en la convocatoria de ponencias y experiencias para la Semana de la Inteligencia Artificial en las Artes y la Ciencia, que se llevará a cabo del 25 al 28 de mayo de 2026 en la ciudad de Manizales, Colombia.
+                            El Centro de Ciencia Francisco José de Caldas de la Universidad de Caldas y el Centro Cultural del Banco de la República en Manizales invitan a artistas, investigadores/as, estudiantes, docentes, desarrolladores/as, gestores/as culturales, colectivos, comunidades, ciudadanos y demás actores interesados en las relaciones entre la inteligencia artificial (IA), el arte, la ciencia y los procesos educativos, culturales y sociales derivados de esta interacción, a participar en la convocatoria de ponencias y experiencias para la Semana de la Inteligencia Artificial en las Artes y la Ciencia, que se llevará a cabo del 26 al 29 de mayo de 2026 en la ciudad de Manizales, Colombia.
                             <br /><br />
                             En su tercera versión, la Semana de la Inteligencia Artificial busca consolidarse como un espacio de reflexión y diálogo sobre los impactos y posibilidades de la IA en la vida contemporánea. Para ello, contaremos con expertos nacionales que activarán conversaciones, talleres y espacios de diálogo para comprender cómo la IA se integra en la vida cotidiana y en los procesos creativos.
                         </p>
@@ -172,7 +172,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                             <div className={styles.notesBox}>
                                 <p><strong>Nota 1:</strong> La participación a través de las ponencias o experiencias no genera ningún vínculo contractual con el Banco de la República ni con el Centro de Ciencia Francisco José de Caldas. Se expedirá una constancia de participación firmada por el Banco de la República y la Universidad de Caldas.</p>
                                 <p style={{ marginTop: '1.5rem' }}><strong>Nota 2:</strong> Las iniciativas artísticas presentadas en el encuentro no serán exhibidas ni entrarán a formar parte de las colecciones de arte del Banco de la República ni del Centro de Ciencia Francisco José de Caldas.</p>
-                                <p style={{ marginTop: '1.5rem' }}><strong>Nota 3:</strong> Quienes sean seleccionados para participar en el encuentro deben tener disponibilidad para la presentación de su ponencia o experiencia entre el 25 al 28 de mayo del presente año, según la programación de la semana.</p>
+                                <p style={{ marginTop: '1.5rem' }}><strong>Nota 3:</strong> Quienes sean seleccionados para participar en el encuentro deben tener disponibilidad para la presentación de su ponencia o experiencia entre el 26 al 29 de mayo del presente año, según la programación de la semana.</p>
                                 <p style={{ marginTop: '1.5rem' }}><strong>Nota 4:</strong> La aceptación como ponente no incluye gastos de ningún tipo por parte del evento y de la organización.</p>
                             </div>
                         </div>
@@ -184,7 +184,7 @@ const TermsOfReference2026: React.FC<TermsProps> = ({ onBack }) => {
                                     { l: "Apertura", d: "03 Feb" },
                                     { l: "Cierre", d: "20 Mar" },
                                     { l: "Resultados", d: "20 Abr" },
-                                    { l: "Evento", d: "25-28 May" }
+                                    { l: "Evento", d: "26-29 May" }
                                 ].map((date, i) => (
                                     <div key={i} className={styles.cronItem}>
                                         <span className={styles.cronLabel}>{date.l}</span>

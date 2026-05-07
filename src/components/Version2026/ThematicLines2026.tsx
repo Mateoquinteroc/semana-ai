@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ThematicLines2026.module.css';
 
 import { THEMATIC_AXES } from './constants';
 
 const ThematicLines2026: React.FC = () => {
+    const [externalHoverIndex, setExternalHoverIndex] = useState<number | null>(null);
+
+    useEffect(() => {
+        const handleSpeakerHover = (e: any) => {
+            setExternalHoverIndex(e.detail?.axisIndex ?? null);
+        };
+        window.addEventListener('speakerHover', handleSpeakerHover as EventListener);
+        return () => window.removeEventListener('speakerHover', handleSpeakerHover as EventListener);
+    }, []);
+
     return (
         <section className={styles.section}>
             <div className={styles.sectionHeader}>
@@ -11,7 +21,10 @@ const ThematicLines2026: React.FC = () => {
             </div>
             <div className={styles.grid}>
                 {THEMATIC_AXES.map((axis, index) => (
-                    <div key={index} className={styles.axisCard}>
+                    <div 
+                        key={index} 
+                        className={`${styles.axisCard} ${externalHoverIndex === index ? styles.axisCardHovered : ''}`}
+                    >
                         <div className={styles.text}>
                             <div className={styles.header}>
                                 <span className={styles.label}>

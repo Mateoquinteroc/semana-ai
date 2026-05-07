@@ -103,26 +103,31 @@
     }
 }
 
-.axisCard:hover {
+.axisCard:hover,
+.axisCardHovered {
     background-color: #1a1a1a;
     z-index: 2;
 }
 
-.axisCard:hover .text {
+.axisCard:hover .text,
+.axisCardHovered .text {
     transform: translateX(15px);
     color: #ffffff;
 }
 
-.axisCard:hover .label {
+.axisCard:hover .label,
+.axisCardHovered .label {
     opacity: 1;
     color: #ffffff;
 }
 
-.axisCard:hover .icon {
+.axisCard:hover .icon,
+.axisCardHovered .icon {
     color: #ffffff;
 }
 
-.axisCard:hover .title {
+.axisCard:hover .title,
+.axisCardHovered .title {
     margin-bottom: 2rem;
 }
 
@@ -170,7 +175,8 @@
     z-index: 10;
 }
 
-.axisCard:hover .questionsWrapper {
+.axisCard:hover .questionsWrapper,
+.axisCardHovered .questionsWrapper {
     max-height: 400px;
     opacity: 1;
 }
@@ -213,7 +219,8 @@
     transition: opacity 0.5s;
 }
 
-.axisCard:hover .footerLabel {
+.axisCard:hover .footerLabel,
+.axisCardHovered .footerLabel {
     opacity: 0.4;
 }
 
@@ -226,6 +233,7 @@
     z-index: -1;
 }
 
-.axisCard:hover .bgAccent {
+.axisCard:hover .bgAccent,
+.axisCardHovered .bgAccent {
     transform: translateY(0);
 }

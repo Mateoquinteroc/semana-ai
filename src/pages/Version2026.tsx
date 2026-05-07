@@ -44,9 +44,9 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
             <main className={styles.main}>
                 {VISIBLE_COMPONENTS.hero && <Hero2026 />}
                 {VISIBLE_COMPONENTS.intro && <IntroSection2026 />}
+                {VISIBLE_COMPONENTS.speakers && <Speakers2026 />}
                 {VISIBLE_COMPONENTS.thematicLines && <ThematicLines2026 />}
                 {VISIBLE_COMPONENTS.schedule && <Schedule2026 />}
-                {VISIBLE_COMPONENTS.speakers && <Speakers2026 />}
                 {VISIBLE_COMPONENTS.location && <Location2026 />}
                 {VISIBLE_COMPONENTS.registration && <Registration2026 />}
                 {VISIBLE_COMPONENTS.liveStream && <LiveStream2026 />}

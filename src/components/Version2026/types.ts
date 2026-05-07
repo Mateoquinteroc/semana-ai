@@ -18,6 +18,9 @@ export interface Speaker {
     role: string;
     bio: string;
     imageUrl: string;
+    conference?: string;
+    workshop?: string;
+    profile: string;
 }
 
 export interface Message {

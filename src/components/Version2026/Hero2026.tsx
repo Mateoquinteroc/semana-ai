@@ -10,7 +10,12 @@ const Hero2026: React.FC = () => {
         <section className={styles.hero}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <div>
+                    <img 
+                        src="/disenos-png/cuadricula-blanco.png"
+                        alt="Grid overlay" 
+                        className={styles.gridOverlay} 
+                    />
+                    <div className={styles.textContent}>
                         <div className={styles.logo}>
                             <span className="material-symbols-outlined" style={{ fontSize: '2.25rem' }}>architecture</span>
                         </div>

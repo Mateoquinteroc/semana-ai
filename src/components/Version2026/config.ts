@@ -17,7 +17,7 @@ export const VISIBLE_COMPONENTS = {
     intro: true,
     thematicLines: true,
     schedule: false,
-    speakers: false,
+    speakers: true,
     location: true,
     registration: true,
     liveStream: false,

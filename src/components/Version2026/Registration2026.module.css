@@ -76,6 +76,7 @@
     font-size: 1.125rem;
     font-weight: 300;
     outline: none;
+    color: #1a1a1a;
 }
 
 .input::placeholder {
@@ -91,6 +92,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     outline: none;
+    color: #1a1a1a;
 }
 
 .submitBtn {

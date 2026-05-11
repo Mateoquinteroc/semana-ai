@@ -16,7 +16,7 @@ export const VISIBLE_COMPONENTS = {
     hero: true,
     intro: true,
     thematicLines: true,
-    schedule: false,
+    schedule: true,
     speakers: true,
     location: true,
     registration: true,

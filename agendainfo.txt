@@ -1,0 +1,153 @@
+{
+  "programacion":[
+    {
+      "fecha": "martes 26 de mayo",
+      "tema": "Creación artística",
+      "eventos":[
+        {
+          "hora": "9:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Apertura oficial tercera Semana de la Inteligencia Artificial en las artes y la ciencia"
+        },
+        {
+          "hora": "9:30",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Conferencia: Máquinas de estados infinitos: una aproximación poética a la técnica de los modelos de aprendizaje automático\nPor: Ana Guzmán\nPresencial"
+        },
+        {
+          "hora": "10:30",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Descanso"
+        },
+        {
+          "hora": "10:45",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: ¿El segundo original o la santa copia? Beatriz González, la técnica, la datificación de los archivos y la mediación de las imágenes\nPor: Helmunth Torres-Contreras\nVirtual"
+        },
+        {
+          "hora": "11:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Del hacer al pensar: tensiones de la práctica\nPor: William Ospina Toro y Silvana Lopez Bernal\nPresencial"
+        },
+        {
+          "hora": "11:20",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: La coherencia del identificador visual en la era de la inteligencia artificial generativa: una lectura semiótica y proyectual\nPor: Diego Alejandro Agudelo Ospina\nPresencial"
+        },
+        {
+          "hora": "2:00",
+          "lugar": "Centro Cultural del Banco de la República, Auditorio",
+          "descripcion": "Taller Del caos al cosmos: creación de ruido cósmico con ComfyUI.\nPor: Ana Guzmán"
+        }
+      ]
+    },
+    {
+      "fecha": "miércoles 27 de mayo",
+      "tema": "Cultura ambiental",
+      "eventos":[
+        {
+          "hora": "9:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Conferencia: IA: Aplicaciones e implicaciones para la sostenibilidad ambiental\nPor: Olga Ocampo López"
+        },
+        {
+          "hora": "10:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Descanso"
+        },
+        {
+          "hora": "10:15",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Propuesta de implementación y evaluación dinámica del índice de transición energética territorial en Colombia basado en técnicas de inteligencia artificial\nPor: Grupo GIA UTP y Grupo TIC del Ministerio de Minas y Energía Alexander Molina, Carlos Andrés Gómez, Julio César Chavarro y otros\nPresencial"
+        },
+        {
+          "hora": "10:45",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Experiencia: Inteligencia artificial y futurismo social\nPor: Juliana Grisales Naranjo\nPresencial"
+        },
+        {
+          "hora": "14:00",
+          "lugar": "Centro Cultural del Banco de la República, Auditorio",
+          "descripcion": "Taller IA para la investigación y el desarrollo en sostenibilidad ambiental\nPor: Olga Ocampo López"
+        }
+      ]
+    },
+    {
+      "fecha": "jueves 28 de mayo",
+      "tema": "Ética e inteligencia artificial",
+      "eventos":[
+        {
+          "hora": "9:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Conferencia: Retos de gobernanza de la I.A.\nPor: Juan David Gutiérrez"
+        },
+        {
+          "hora": "10:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Descanso"
+        },
+        {
+          "hora": "10:15",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Contaminación documental y ética de la difusión: trazabilidad de citas alucinadas y datos fabricados en la divulgación científica y cultural\nPor: Sergio Correa Mejía\nPresencial"
+        },
+        {
+          "hora": "10:30",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Inteligencia artificial en educación superior: usos y percepciones de la voz de los estudiantes\nPor: Jonatan Andrés Puentes Gonzalez\nVirtual"
+        },
+        {
+          "hora": "10:45",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Marco ético-curricular para el desarrollo de un simulador interactivo orientado a competencias de ética y ciudadanía\nPor: Ruth Esther Martínez y Mattius Felipe Rodríguez Buitrago\nPresencial"
+        },
+        {
+          "hora": "14:00",
+          "lugar": "Centro Cultural del Banco de la República, Auditorio",
+          "descripcion": "Taller Buenas prácticas en el uso de herramirentas de la I.A. en el sector público\nPor: Juan David Gutiérrez."
+        }
+      ]
+    },
+    {
+      "fecha": "viernes 29 de mayo",
+      "tema": "IA, trabajo y transformación social",
+      "eventos":[
+        {
+          "hora": "9:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Conferencia: De aprendizaje automático a IA generativa: transformaciones en el mundo del trabajo\nPor: Reinel Tabares (docente de la Facultad de Inteligencia Artificial e Ingenierías de la Universidad de Caldas)"
+        },
+        {
+          "hora": "10:00",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Descanso"
+        },
+        {
+          "hora": "10:15",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: La inteligencia artificial como aliada del modelo de consultoría social y herramienta de supervivencia para transformar el esfuerzo del músico independiente en una carrera digna.\nPor:\nautor: Jorge Andres Sanchez Gallejo\ncoautora: Maria Alejandra Ramirez Perez y Victoria Rubio Ruiz\nPresencial"
+        },
+        {
+          "hora": "10:30",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Chatbots, automatización y reconfiguración organizacional en el sector cultural: hacia nuevos modelos de gestión humano–máquina en la era de la inteligencia artificial\nPor: Marcela Pedraza Quintero\nPresencial"
+        },
+        {
+          "hora": "10:45",
+          "lugar": "Centro Cultural Universitario Rogelio Salmona, Óculo",
+          "descripcion": "Ponencia: Sandbox regulatorio en la administración pública colombiana: Innovación tecnológica con garantías para los derechos fundamentales.\nPor: Xiomara Astrid Ciodaro Pérez\nPresencial"
+        },
+        {
+          "hora": "14:00",
+          "lugar": "Centro Cultural del Banco de la República, Auditorio",
+          "descripcion": "Conversación abierta\nMesa intersectorial"
+        },
+        {
+          "hora": "3:30",
+          "lugar": "Centro Cultural del Banco de la República, Auditorio",
+          "descripcion": "Cierre Semana de la IA en las artes y la ciencia\nExperiencia sonora: Paralelismo fluctuante\nPor: Mia Lebihan y Juan Daniel Ramirez\nPresencial"
+        }
+      ]
+    }
+  ]
+}

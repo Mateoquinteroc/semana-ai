@@ -317,7 +317,7 @@
 /* ── Badge ── */
 .badgesContainer {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
     flex-shrink: 0;
 }
@@ -330,6 +330,7 @@
     padding: 0.25rem 0.65rem;
     background-color: #1a1a1a;
     color: #ffffff;
+    border: 1px solid transparent;
     border-radius: 999px;
     text-decoration: none;
     display: inline-block;
@@ -409,6 +410,12 @@
 
 .eventItem:hover .badge_taller,
 .eventItem:hover .badge_cierre {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-color: #ffffff;
+}
+
+.eventItem:hover .inscriptionChip {
     background-color: #ffffff;
     color: #1a1a1a;
     border-color: #ffffff;

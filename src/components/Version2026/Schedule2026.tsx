@@ -275,15 +275,27 @@ const Schedule2026: React.FC = () => {
                             <div className={styles.eventContent}>
                                 <div className={styles.eventHeader}>
                                     <h4 className={styles.eventTitle}>{title}</h4>
-                                    <span className={`${styles.eventBadge} ${styles[`badge_${type}`]}`}>
-                                        {type === 'conferencia' ? 'Conferencia' :
-                                         type === 'ponencia' ? 'Ponencia' :
-                                         type === 'taller' ? 'Taller' :
-                                         type === 'apertura' ? 'Apertura' :
-                                         type === 'cierre' ? 'Cierre' :
-                                         type === 'mesa' ? 'Mesa' :
-                                         type === 'experiencia' ? 'Experiencia' : 'Evento'}
-                                    </span>
+                                    <div className={styles.badgesContainer}>
+                                        {type === 'taller' && (
+                                            <a 
+                                                href="https://forms.cloud.microsoft/r/cd9i25W9bM"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={styles.inscriptionChip}
+                                            >
+                                                Inscripción ↗
+                                            </a>
+                                        )}
+                                        <span className={`${styles.eventBadge} ${styles[`badge_${type}`]}`}>
+                                            {type === 'conferencia' ? 'Conferencia' :
+                                             type === 'ponencia' ? 'Ponencia' :
+                                             type === 'taller' ? 'Taller' :
+                                             type === 'apertura' ? 'Apertura' :
+                                             type === 'cierre' ? 'Cierre' :
+                                             type === 'mesa' ? 'Mesa' :
+                                             type === 'experiencia' ? 'Experiencia' : 'Evento'}
+                                        </span>
+                                    </div>
                                 </div>
 
                                 {meta.length > 0 && (

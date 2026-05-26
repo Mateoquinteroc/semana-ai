@@ -20,7 +20,7 @@ export const VISIBLE_COMPONENTS = {
     speakers: true,
     location: true,
     registration: true,
-    liveStream: false,
+    liveStream: true,
     footer: true,
     aiGuide: false
 };

@@ -53,6 +53,17 @@ const Version2026: React.FC<Version2026Props> = ({ initialView = 'home' }) => {
                 {VISIBLE_COMPONENTS.footer && <Footer2026 />}
             </main>
             {VISIBLE_COMPONENTS.aiGuide && <AIGuide2026 />}
+
+            <a 
+                href="https://www.youtube.com/@CentroDeCienciaFJC/live"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.floatingLiveBtn}
+                title="Ver transmisión en vivo"
+            >
+                <span className={styles.liveDot} />
+                <span>LIVE</span>
+            </a>
         </div>
     );
 };
